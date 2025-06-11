@@ -1,0 +1,424 @@
+/* Reset básico para evitar inconsistências entre navegadores */
+* {
+    margin: 0;            /* Remove margens padrão */
+    padding: 0;           /* Remove padding padrão */
+    box-sizing: border-box; /* Faz com que padding e border façam parte da largura/altura do elemento */
+}
+
+/* Define a fonte do site para 'Raleway' */
+body {
+    font-family: 'Raleway';
+}
+
+/* Estilo principal do cabeçalho */
+.main-header {
+    background-color: #06489f; /* Fundo azul escuro */
+    color: white;              /* Cor do texto branca */
+    width: 100%;               /* Ocupa toda a largura da tela */
+    height: 64px;              /* Altura fixa do cabeçalho */
+    display: flex;             /* Usado para layout flexível */
+    justify-content: center;   /* Centraliza horizontalmente os filhos */
+    position: fixed;           /* Fixa o header no topo da página */
+    top: 0;                    /* Fixa na posição topo */
+    left: 0;                   /* Fixa na posição esquerda */
+    z-index: 1000;             /* Garante que fique acima de outros elementos */
+    transition: transform 0.3s ease-in-out; /* Animação suave para transformações */
+}
+
+/* Classe para esconder o header com animação */
+.esconder_Header {
+    transform: translateY(-100%); /* Move o header para cima, fora da tela */
+}
+
+/* Container do nav dentro do header */
+.nav_container {
+    width: 95%;                /* Largura de 95% da tela */
+    height: 100%;              /* Altura igual ao header */
+    display: flex;             /* Layout flexível */
+    justify-content: space-between; /* Espaça os filhos entre si */
+}
+
+/* Logo do nav */
+.nav_logo {
+    display: flex;             /* Flexbox para alinhamento */
+    align-items: center;       /* Alinha verticalmente no centro */
+    width: 15%;                /* Ocupa 15% da largura do nav */
+}
+
+/* Imagem do logo */
+.nav_logo img {
+    width: 75%;                /* Largura da imagem 75% do container */
+}
+
+/* Comentado - estilização alternativa para título do logo */
+/* .nav_logo h1 {
+    font-size: 1.5rem;
+} */
+
+/* Container dos links do header */
+.nav_elementos {
+    width: 30%;                /* 30% da largura */
+    display: flex;             /* Flexbox */
+    align-items: center;       /* Alinha verticalmente ao centro */
+}
+
+/* Lista de navegação */
+.nav_ul {
+    width: 100%;               /* Largura total do container */
+    display: flex;             /* Flex para os itens */
+    justify-content: space-between; /* Espaçamento entre os itens */
+    list-style: none;          /* Remove marcadores da lista */
+}
+
+/* Itens da lista do nav */
+.nav_li {
+    color: white;              /* Cor do texto branco */
+    display: flex;             /* Flexbox */
+    align-items: center;       /* Alinhamento vertical */
+    position: relative;        /* Para posicionar dropdown absoluto depois */
+}
+
+/* Item específico "categorias" */
+.categorias {
+    display: flex;             /* Flexbox */
+    align-items: center;       /* Centraliza verticalmente */
+}
+
+/* Item específico "entrar" */
+.entrar {
+    font-weight: bold;         /* Negrito */
+}
+
+/* Estilo para links do menu */
+.link {
+    color: white;              /* Cor branca */
+    text-decoration: none;     /* Remove sublinhado */
+}
+
+/* Ícones do Google Fonts (seta dropdown) */
+.material-symbols-outlined {
+    color: white;              /* Ícones brancos */
+}
+
+/* Container dropdown inicialmente escondido */
+.dropdown_container {
+    overflow: hidden;          /* Esconde conteúdo que ultrapassa */
+    position: absolute;        /* Posiciona em relação ao pai */
+    top: 100%;                 /* Fica logo abaixo do item pai */
+    left: 0;                   /* Alinha à esquerda */
+    background-color: #1a3f8a; /* Fundo azul escuro */
+    z-index: 1;                /* Sobrepõe itens abaixo */
+    border: 5px;               /* Borda (precisa ajuste, pois só define largura) */
+    max-height: 0;             /* Altura zero (escondido) */
+    opacity: 0;                /* Transparente */
+    transform: translateY(-10px); /* Levemente deslocado para cima */
+    pointer-events: none;      /* Desabilita clique/interação */
+    transition:                  /* Transições para animação suave */
+        max-height 0.4s ease,
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+/* Links dentro do dropdown */
+.dropdown_link {
+    padding: 10px 15px;        /* Espaçamento interno */
+    display: block;            /* Ocupa toda linha */
+}
+
+/* Efeito hover nos links do dropdown */
+.dropdown_container a:hover {
+    background-color: #2b56bb; /* Fundo azul mais claro */
+}
+
+/* Quando o item da lista é hover, exibe dropdown com animação */
+.nav_ul li:hover .dropdown_container {
+    display: block;            /* Mostra o dropdown */
+    max-height: 500px;         /* Altura suficiente para mostrar */
+    opacity: 1;                /* Totalmente visível */
+    transform: translateY(0);  /* Volta à posição normal */
+    pointer-events: auto;      /* Permite interação */
+}
+
+/* Ícone seta do dropdown */
+.dropdown_seta {
+    display: inline-block;     /* Inline mas permite transformações */
+    transition: transform 0.3s ease; /* Animação suave para rotação */
+}
+
+/* Gira seta ao abrir dropdown */
+.nav_ul li:hover .dropdown_seta {
+    transform: rotate(180deg);
+}
+
+/* Container do tópico da página */
+.topico {
+    width: 100%;               /* Largura total */
+    height: 100px;             /* Altura fixa */
+    margin-top: 80px;          /* Espaço superior para não ficar embaixo do header fixo */
+    display: flex;             /* Flex para centralizar conteúdo */
+    align-items: center;       /* Centraliza verticalmente */
+}
+
+/* Box do tópico */
+.container_topico {
+    width: 100%;               /* Largura total */
+    height: 100px;             /* Altura igual ao container pai */
+    background-color: #033476; /* Fundo azul escuro */
+    display: flex;             /* Flexbox */
+    justify-content: center;   /* Centraliza horizontalmente */
+    align-items: center;       /* Centraliza verticalmente */
+    box-shadow: 0 2px 10px #000000; /* Sombra para dar profundidade */
+}
+
+/* Imagem dentro do container_topico */
+.container_topico img {
+    height: 120px;             /* Altura maior que container para efeito visual */
+}
+
+/* Texto do tópico */
+.container_topico span {
+    margin-left: 1%;           /* Espaço à esquerda da imagem */
+    font-size: 48px;           /* Fonte grande */
+    color: white;              /* Texto branco */
+}
+
+/* Container do botão de votação */
+.vote {
+    width: 100%;               /* Largura total */
+    display: flex;             /* Flexbox */
+    justify-content: center;   /* Centraliza o botão */
+}
+
+/* Esconde os inputs tipo radio */
+input[type="radio"] {
+    display: none;             /* Não mostra os rádios visíveis */
+}
+
+/* Estilo para o label, que age como botão/caixa clicável */
+label {
+    display: flex;             /* Flex para alinhar itens dentro */
+    align-items: center;       /* Alinha verticalmente */
+    margin-left: 2%;           /* Margem à esquerda */
+    margin-right: 2%;          /* Margem à direita */
+    background: rgba(217, 217, 217, 0.3); /* Fundo cinza translúcido */
+    border-radius: 12px;       /* Bordas arredondadas */
+    padding: 12px 0;           /* Espaçamento vertical */
+    cursor: pointer;           /* Cursor de mãozinha ao passar */
+    transition: background 0.3s, box-shadow 0.3s, ease 0.3s; /* Transição suave para efeitos */
+}
+
+/* Efeito hover no label */
+label:hover {
+    background: #06489f;       /* Fundo azul */
+    box-shadow: 0 2px 10px #000000; /* Sombra para destaque */
+    color: white;              /* Texto branco */
+}
+
+/* Seletores para filhos dentro da box ao passar o mouse */
+label:hover .box :nth-child(1) {
+    color: white;              /* Texto branco */
+    font-weight: bold;         /* Negrito */
+}
+
+label:hover .box :nth-child(2) {
+    color: white;              /* Texto branco */
+}
+
+/* Imagem dentro do label */
+label img {
+    width: 100px;              /* Largura fixa */
+    margin-left: 1%;           /* Espaço à esquerda */
+    object-fit: cover;         /* Cobre o espaço sem distorcer */
+    border-radius: 8px;        /* Bordas arredondadas */
+    margin-right: 16px;        /* Espaço à direita */
+    border: 3px solid transparent; /* Borda invisível inicialmente */
+    transition: border 0.3s, transform 0.3s; /* Transição para efeitos */
+}
+
+/* Container de info dentro do label */
+.info {
+    display: flex;             /* Flexbox */
+    flex-direction: column;    /* Coluna vertical */
+}
+
+/* Título do filme */
+.title {
+    font-size: 18px;           /* Fonte média */
+    margin-bottom: 6px;        /* Espaço abaixo */
+    color: #242424;            /* Cinza escuro */
+}
+
+/* Descrição do filme */
+.descricao {
+    font-size: 14px;           /* Fonte menor */
+    color: #555;               /* Cinza médio */
+}
+
+/* Quando o input radio está selecionado, estiliza a imagem adjacente */
+input[type="radio"]:checked + .box img {
+    border-color: #FFFA8A;     /* Borda amarela clara */
+    transform: scale(1.05);    /* Aumenta a imagem */
+}
+
+/* Quando selecionado, título muda para amarelo */
+input[type="radio"]:checked + .box .title {
+    color: #FFFA8A;
+}
+
+/* Quando selecionado, descrição fica branca */
+input[type="radio"]:checked + .box .descricao {
+    color: white;
+}
+
+/* Estilo do label quando o input radio dentro dele está selecionado */
+label:has(input[type="radio"]:checked) {
+    background: #06489f;       /* Fundo azul */
+    transform: scale(1.01);    /* Leve aumento */
+}
+
+/* Box que envolve imagem e textos */
+.box {
+    display: flex;             /* Flexbox */
+    align-items: center;       /* Alinhamento vertical */
+    width: 100%;               /* Largura total */
+}
+
+/* Estilo para títulos h2 */
+h2 {
+    text-align: center;        /* Centraliza texto */
+}
+
+/* Estilo para canvas do gráfico */
+canvas {
+    max-width: 600px;          /* Largura máxima */
+    margin: 40px auto;         /* Espaço em cima e embaixo + centraliza horizontalmente */
+    display: block;            /* Para funcionar o margin auto */
+}
+
+/* Estilo do botão submit */
+input[type="submit"] {
+    margin-top: 20px;          /* Espaço acima */
+    margin-bottom: 20px;       /* Espaço abaixo */
+    padding: 10px 20px;        /* Espaçamento interno */
+    font-size: 16px;           /* Fonte média */
+    border: none;              /* Remove bordas padrão */
+    background-color: #06489f; /* Fundo azul */
+    color: white;              /* Texto branco */
+    border-radius: 8px;        /* Bordas arredondadas */
+    cursor: pointer;           /* Cursor mãozinha */
+    transition: ease 0.3s;     /* Transição suave */
+}
+
+/* Efeito hover do botão submit */
+input[type="submit"]:hover {
+    background-color: #1a3f8a; /* Fundo azul mais escuro */
+    transform: scale(1.05);    /* Aumenta o botão */
+}
+
+/* Estilização do footer */
+footer {
+    background-color: #06489f; /* Fundo azul */
+}
+
+/* Container do footer */
+.footerContainer {
+    width: 100%;               /* Largura total */
+    padding: 70px 30px 20px;  /* Espaçamento interno (topo, lados, baixo) */
+}
+
+/* Container dos ícones de redes sociais no footer */
+.socialicons {
+    display: flex;             /* Flexbox */
+    justify-content: center;   /* Centraliza horizontalmente */
+}
+
+/* Links dos ícones sociais */
+.socialicons a {
+    text-decoration: none;     /* Remove sublinhado */
+    padding: 10px;             /* Espaçamento interno */
+    background-color: white;   /* Fundo branco */
+    margin: 10px;              /* Margem entre ícones */
+    border-radius: 50%;        /* Ícones arredondados (círculo) */
+}
+
+/* Ícones em si dentro dos links */
+.socialicons a i {
+    font-size: 2em;            /* Tamanho da fonte grande */
+    color: #06489f;            /* Cor azul */
+    opacity: 0.9;              /* Leve transparência */
+}
+
+/* Efeito hover no link dos ícones sociais */
+.socialicons a:hover {
+    background-color: #06489f; /* Fundo azul */
+    transition: 0.5s;          /* Transição suave */
+}
+
+/* Efeito hover no ícone dentro do link */
+.socialicons a i:hover {
+    color: white;              /* Ícone branco */
+    transition: 0.5s;          /* Transição suave */
+}
+
+/* Área de navegação do footer */
+.footerNav {
+    margin: 30px 0;            /* Espaçamento vertical */
+}
+
+/* Lista do menu do footer */
+.footerNav ul {
+    display: flex;             /* Flexbox */
+    justify-content: center;   /* Centraliza horizontalmente */
+    list-style: none;          /* Remove marcadores */
+}
+
+/* Links do menu do footer */
+.footerNav ul li a {
+    color: white;              /* Texto branco */
+    margin: 20px;              /* Espaçamento lateral */
+    text-decoration: none;     /* Remove sublinhado */
+    font-size: 1.3em;          /* Fonte maior */
+    opacity: 0.7;              /* Transparência */
+    transition: 0.5s;          /* Transição suave */
+}
+
+/* Hover nos links do footer */
+.footerNav ul li a:hover {
+    opacity: 1;                /* Opacidade total */
+}
+
+/* Barra inferior do footer */
+.footerBottom {
+    background-color: #06489f; /* Fundo azul */
+    padding: 20px;             /* Espaçamento interno */
+    text-align: center;        /* Centraliza texto */
+}
+
+/* Texto da barra inferior */
+.footerBottom p {
+    color: white;              /* Texto branco */
+}
+
+/* Nome dos designers */
+.designer {
+    opacity: 0.7;              /* Transparência */
+    text-transform: uppercase; /* Letras maiúsculas */
+    letter-spacing: 1px;       /* Espaçamento entre letras */
+    font-weight: 400;          /* Peso da fonte */
+    margin: 0px 5px;           /* Margem horizontal */
+}
+
+/* Responsividade para telas até 700px */
+@media (max-width: 700px) {
+    /* Nav do footer muda para coluna */
+    .footerNav ul {
+        flex-direction: column; /* Empilha itens verticalmente */
+    }
+
+    /* Itens da lista do footer */
+    .footerNav ul li {
+        width: 100%;           /* Ocupa toda largura */
+        text-align: center;    /* Centraliza texto */
+        margin: 10px;          /* Margem entre os itens */
+    }
+}

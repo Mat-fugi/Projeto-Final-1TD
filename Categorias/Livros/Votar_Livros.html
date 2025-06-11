@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<!-- Declara o tipo do documento como HTML5 -->
+<html lang="pt-BR">
+<!-- Define o idioma da página como português do Brasil -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres para UTF-8 -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a viewport para responsividade em dispositivos móveis -->
+
+    <title>Livros</title>
+    <!-- Título da página exibido na aba do navegador -->
+
+    <!--Importa ícones do Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- Link para importar ícones do Material Symbols do Google -->
+
+    <!-- Importa fonte do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Otimiza a conexão para carregamento mais rápido da fonte -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Otimiza a conexão para carregamento das fontes com CORS -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Importa a fonte Raleway com vários pesos e estilos (itálico e normal) -->
+
+    <!-- Importa o CSS externo -->
+    <link rel="stylesheet" href="/Categorias/Animes/style.css">
+    <!-- Link para o arquivo CSS externo que estiliza a página -->
+
+    <!-- Importa icones da Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link para a biblioteca de ícones Font Awesome com integridade e política de referrer -->
+
+    <link rel="shortcut icon" type="imagex/png" href="/imagens/logo.ico">
+    <!-- Define o ícone da aba do navegador (favicon) -->
+
+</head>
+
+<body>
+    <!-- Cabeçalho principal -->
+    <header class="main-header">
+        <nav class="nav_container">
+            <!-- Container da navegação -->
+            <div class="nav_logo">
+                <a href="/index.html">
+                    <img src="/imagens/Logo_TheBest.png" alt="logo">
+                </a>
+                <!-- Logo da página -->
+            </div>
+            <div class="nav_elementos">
+                <ul class="nav_ul">
+                    <!-- Lista dos links principais de navegação -->
+                    <li class="nav_li"><a href="/index.html" class="link">Home</a></li>
+                    <!-- Link para a página inicial -->
+                    <li class="nav_li"><a href="/Sobre/sobre.html" class="link">Sobre</a></li>
+                    <!-- Link para página Sobre -->
+
+                    <li class="nav_li categorias">
+                        <a href="/Categorias/categorias.html" class="link">Categorias</a>
+                        <span class="material-symbols-outlined dropdown_seta">arrow_drop_up</span>
+                        <!-- Ícone da seta para dropdown -->
+
+                        <div class="dropdown_container">
+                            <!-- Menu dropdown das categorias -->
+                            <a href="/Categorias/Filmes/Votar_Filmes.html" class="dropdown_link link">Filmes</a>
+                            <a href="/Categorias/Animes/Votar_Animes.html" class="dropdown_link link">Animes</a>
+                            <a href="/Categorias/Series/Votar_Series.html" class="dropdown_link link">Séries</a>
+                            <a href="/Categorias/Jogos/Votar_Jogos.html" class="dropdown_link link">Jogos</a>
+                            <a href="/Categorias/Livros/Votar_Livros.html" class="dropdown_link link">Livros</a>
+                            <a href="/Categorias/Atores/Votar_Atores.html" class="dropdown_link link">Atores</a>
+                        </div>
+                    </li>
+
+                    <li class="nav_li entrar"><a href="/Cadastro/cadastro.php" class="link">Entrar</a></li>
+                    <!-- Link para a página de cadastro/login -->
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="topico">
+        <!-- Seção do tópico com título e imagem -->
+        <div class="container_topico">
+            <img src="/imagens/Votar_Livros/Votar_Livros_Titulo.png" alt="Livros">
+            <!-- Imagem do título Livros -->
+            <span>Livros</span>
+            <!-- Texto do título -->
+        </div>
+    </div>
+
+    <form action="salvar_voto.php" method="post">
+        <!-- Formulário para envio do voto -->
+        <label style="margin-top: 20px;">
+            <input type="radio" name="Anime" value="Fourth Wing">
+            <!-- Radio button para o livro Fourth Wing -->
+            <div class="box">
+                <!-- Container visual para a opção -->
+                <img src="/imagens/Votar_Livros/Fourth_Wing.jpg" alt="Fourth Wing">
+                <!-- Imagem da capa do livro -->
+                <div class="info">
+                    <!-- Informações do livro -->
+                    <div class="title">Fourth Wing</div>
+                    <!-- Título do livro -->
+                    <div class="descricao">A saga da criação da bomba atômica, focada em J. Robert Oppenheimer e os
+                        dilemas éticos da ciência e do poder.</div>
+                    <!-- Descrição resumida do livro -->
+                </div>
+            </div>
+        </label>
+        <!-- Repetição do padrão acima para cada livro com margem entre eles -->
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Project Hail Mary">
+            <div class="box">
+                <img src="/imagens/Votar_Livros/Project_Hail_Mary.jpg" alt="Project Hail Mary">
+                <div class="info">
+                    <div class="title">Project Hail Mary</div>
+                    <div class="descricao">Uma imigrante chinesa comum é arrastada para uma aventura multiversal
+                        caótica, onde precisa salvar a realidade – enquanto lida com família e identidade.</div>
+                </div>
+            </div>
+        </label>
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Kairos">
+            <div class="box">
+                <img src="/imagens/Votar_Livros/Kairos.jpg" alt="Kairos">
+                <div class="info">
+                    <div class="title">Kairos</div>
+                    <div class="descricao">Décadas após o original, Maverick retorna para treinar uma nova geração de
+                        pilotos enquanto encara seu passado e a passagem do tempo.</div>
+                </div>
+            </div>
+        </label>
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="James">
+            <div class="box">
+                <img src="/imagens/Votar_Livros/James.jpg" alt="James">
+                <div class="info">
+                    <div class="title">James</div>
+                    <div class="descricao">Miles Morales mergulha em um multiverso de versões alternativas do
+                        Homem-Aranha, enfrentando escolhas difíceis sobre quem ele é.</div>
+                </div>
+            </div>
+        </label>
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="The Women">
+            <div class="box">
+                <img src="/imagens/Votar_Livros/The_Women.jpg" alt="The Women">
+                <div class="info">
+                    <div class="title">The Women</div>
+                    <div class="descricao">A história fictícia da maestrina Lydia Tár, cuja carreira e reputação começam
+                        a ruir em meio a poder, ego e cancelamento.</div>
+                </div>
+            </div>
+        </label>
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="The Wager: A Tale of Shipwreck, Mutiny, and Murder">
+            <div class="box">
+                <img src="/imagens/Votar_Livros/The_Wager.jpg" alt="The Wager: A Tale of Shipwreck, Mutiny, and Murder">
+                <div class="info">
+                    <div class="title">The Wager: A Tale of Shipwreck, Mutiny, and Murder</div>
+                    <div class="descricao">Uma mulher adulta relembra as férias de infância com seu pai, numa delicada
+                        reconstrução emocional entre o afeto e a melancolia.</div>
+                </div>
+            </div>
+        </label>
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Atmosphere">
+            <div class="box">
+                <img src="/imagens/Votar_Livros/Atmosphere.jfif" alt="Atmosphere">
+                <div class="info">
+                    <div class="title">Atmosphere</div>
+                    <div class="descricao">O jovem Paul Atreides descobre seu destino em meio a traições, guerras e
+                        profecias no planeta desértico Arrakis, onde o recurso mais valioso do universo é controlado.
+                    </div>
+                </div>
+            </div>
+        </label>
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="The Inheritance Games">
+            <div class="box">
+                <img src="/imagens/Votar_Livros/The_Inheritance_Games.jpg" alt="The Inheritance Games">
+                <div class="info">
+                    <div class="title">The Inheritance Games</div>
+                    <div class="descricao">A jovem Avery Grambs herda uma fortuna de um bilionário misterioso, entrando
+                        em uma complexa disputa com seus herdeiros.</div>
+                </div>
+            </div>
+        </label>
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Crying in H Mart">
+            <div class="box">
+                <img src="/imagens/Votar_Livros/Crying_in_H_Mart.jpg" alt="Crying in H Mart">
+                <div class="info">
+                    <div class="title">Crying in H Mart</div>
+                    <div class="descricao">Em uma ilha isolada da Irlanda, uma amizade termina abruptamente, provocando
+                        reações cômicas e sombrias sobre solidão e propósito.</div>
+                </div>
+            </div>
+        </label>
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="The Seven Husbands of Evelyn Hugo">
+            <div class="box">
+                <img src="/imagens/Votar_Livros/The_Seven_Husbands_of_Evelyn_Hugo.jpg"
+                    alt="The Seven Husbands of Evelyn Hugo">
+                <div class="info">
+                    <div class="title">The Seven Husbands of Evelyn Hugo</div>
+                    <div class="descricao">Dois heróis lendários se encontram e enfrentam o Império Britânico em uma
+                        saga repleta de ação exagerada, músicas e emoção.</div>
+                </div>
+            </div>
+        </label>
+
+        <div class="vote">
+            <input type="submit" value="Votar">
+            <!-- Botão para enviar o formulário -->
+        </div>
+    </form>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <div class="footerContainer">
+            <div class="socialicons">
+                <!-- Ícones de redes sociais -->
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+
+            <nav class="footerNav">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/Sobre/sobre.html">Sobre</a></li>
+                    <li><a href="/Categorias/categorias.html">Categorias</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footerBottom">
+            © 2023 by TheBest.
+            <span class="designer"> Felipe Ferreira</span> e
+            <span class="designer"> Carlos de Souza.</span>
+            <!-- Créditos dos criadores -->
+        </div>
+    </footer>
+
+    <!-- Importa o JavaScript externo -->
+    <script src="/main.js"></script>
+</body>
+
+</html>

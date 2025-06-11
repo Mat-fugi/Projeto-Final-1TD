@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna a página responsiva -->
+    <title>Filmes</title> <!-- Título da aba do navegador -->
+
+    <!--Importa ícones do Google Fonts para usar na página-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <!-- Importa a fonte Raleway do Google Fonts para estilizar o texto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Otimiza carregamento -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Otimiza carregamento -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Importa o CSS externo para estilizar essa página -->
+    <link rel="stylesheet" href="/Categorias/Animes/style.css">
+
+    <!-- Importa a biblioteca de ícones Font Awesome via CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Ícone que aparece na aba do navegador -->
+    <link rel="shortcut icon" type="imagex/png" href="/imagens/logo.ico">
+</head>
+
+<body>
+    <!-- Cabeçalho principal do site -->
+    <header class="main-header">
+        <nav class="nav_container">
+            <!-- Logo do site -->
+            <div class="nav_logo">
+                <a href="/index.html">
+                    <img src="/imagens/Logo_TheBest.png" alt="logo">
+                </a>
+            </div>
+
+            <!-- Navegação principal -->
+            <div class="nav_elementos">
+                <ul class="nav_ul">
+                    <li class="nav_li"><a href="/index.html" class="link">Home</a></li> <!-- Link para Home -->
+                    <li class="nav_li"><a href="/Sobre/sobre.html" class="link">Sobre</a></li> <!-- Link para Sobre -->
+
+                    <!-- Menu dropdown categorias -->
+                    <li class="nav_li categorias">
+                        <a href="/Categorias/categorias.html" class="link">Categorias</a>
+                        <span class="material-symbols-outlined dropdown_seta">arrow_drop_up</span> <!-- Ícone seta -->
+                        <div class="dropdown_container">
+                            <!-- Links para cada categoria -->
+                            <a href="/Categorias/Filmes/Votar_Filmes.html" class="dropdown_link link">Filmes</a>
+                            <a href="/Categorias/Animes/Votar_Animes.html" class="dropdown_link link">Animes</a>
+                            <a href="/Categorias/Series/Votar_Series.html" class="dropdown_link link">Séries</a>
+                            <a href="/Categorias/Jogos/Votar_Jogos.html" class="dropdown_link link">Jogos</a>
+                            <a href="/Categorias/Livros/Votar_Livros.html" class="dropdown_link link">Livros</a>
+                            <a href="/Categorias/Atores/Votar_Atores.html" class="dropdown_link link">Atores</a>
+                        </div>
+                    </li>
+
+                    <!-- Link para página de login/registro -->
+                    <li class="nav_li entrar"><a href="/Cadastro/cadastro.php" class="link">Entrar</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Tópico principal da página com imagem e texto -->
+    <div class="topico">
+        <div class="container_topico">
+            <img src="/imagens/Votar_Animes/Claquete.png" alt="Filmes"> <!-- Imagem de claquete para tema filmes -->
+            <span>Filmes</span> <!-- Texto do tópico -->
+        </div>
+    </div>
+
+    <!-- Formulário para votação -->
+    <form action="salvar_voto.php" method="post">
+        <!-- Cada label representa uma opção de voto com rádio e caixa com imagem e descrição -->
+
+        <label style="margin-top: 20px;">
+            <input type="radio" name="Anime" value="Oppenheimer"> <!-- Radio para opção Oppenheimer -->
+            <div class="box">
+                <img src="/imagens/Votar_Filmes/Oppenheimer.jpg" alt="Oppenheimer"> <!-- Imagem do filme -->
+                <div class="info">
+                    <div class="title">Oppenheimer</div> <!-- Título do filme -->
+                    <div class="descricao">A saga da criação da bomba atômica, focada em J. Robert Oppenheimer e os
+                        dilemas éticos da ciência e do poder.</div> <!-- Descrição do filme -->
+                </div>
+            </div>
+        </label>
+
+        <!-- Repetição para os outros filmes -->
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Tudo em Todo Lugar ao Mesmo Tempo">
+            <div class="box">
+                <img src="/imagens/Votar_Filmes/Tudo_em_todo_o_lugar_ao_mesmo_tempo.jpg"
+                    alt="Tudo em Todo Lugar ao Mesmo Tempo">
+                <div class="info">
+                    <div class="title">Tudo em Todo Lugar ao Mesmo Tempo</div>
+                    <div class="descricao">Uma imigrante chinesa comum é arrastada para uma aventura multiversal
+                        caótica, onde precisa salvar a realidade – enquanto lida com família e identidade.</div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Top Gun: Maverick">
+            <div class="box">
+                <img src="/imagens/Votar_Filmes/Top_Gun_Maverick.jpg" alt="Top Gun: Maverick (2022)">
+                <div class="info">
+                    <div class="title">Top Gun: Maverick (2022)</div>
+                    <div class="descricao">Décadas após o original, Maverick retorna para treinar uma nova geração de
+                        pilotos enquanto encara seu passado e a passagem do tempo.</div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Homem-Aranha: Através do Aranhaverso">
+            <div class="box">
+                <img src="/imagens/Votar_Filmes/Homem_Aranha_Atraves_do_Aranhaverso.jpg"
+                    alt="Homem-Aranha: Através do Aranhaverso">
+                <div class="info">
+                    <div class="title">Homem-Aranha: Através do Aranhaverso</div>
+                    <div class="descricao">Miles Morales mergulha em um multiverso de versões alternativas do
+                        Homem-Aranha, enfrentando escolhas difíceis sobre quem ele é.</div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Barbie">
+            <div class="box">
+                <img src="/imagens/Votar_Filmes/Barbie.jpg" alt="Barbie">
+                <div class="info">
+                    <div class="title">Barbie</div>
+                    <div class="descricao">A história fictícia da maestrina Lydia Tár, cuja carreira e reputação começam
+                        a ruir em meio a poder, ego e cancelamento.</div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Aftersun">
+            <div class="box">
+                <img src="/imagens/Votar_Filmes/Aftersun.jpg" alt="Aftersun">
+                <div class="info">
+                    <div class="title">Aftersun</div>
+                    <div class="descricao">Uma mulher adulta relembra as férias de infância com seu pai, numa delicada
+                        reconstrução emocional entre o afeto e a melancolia.</div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Duna: Parte Um">
+            <div class="box">
+                <img src="/imagens/Votar_Filmes/Duna_Parte_Um.jpg" alt="Duna: Parte Um">
+                <div class="info">
+                    <div class="title">Duna: Parte Um</div>
+                    <div class="descricao">O jovem Paul Atreides descobre seu destino em meio a traições, guerras e
+                        profecias no planeta desértico Arrakis, onde o recurso mais valioso do universo é controlado.
+                    </div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Duna: Parte Dois">
+            <div class="box">
+                <img src="/imagens/Votar_Filmes/Duna_Parte_Dois.jpg" alt="Duna: Parte Dois">
+                <div class="info">
+                    <div class="title">Duna: Parte Dois</div>
+                    <div class="descricao">A continuação da jornada de Paul, agora liderando os Fremen em uma guerra
+                        contra o império. Uma mistura de ação, espiritualidade e política interestelar.
+
+                    </div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Os Banshees de Inisherin">
+            <div class="box">
+                <img src="/imagens/Votar_Filmes/Os_Banshees_de_Inisherin.jpeg" alt="Os Banshees de Inisherin">
+                <div class="info">
+                    <div class="title">Os Banshees de Inisherin</div>
+                    <div class="descricao">Em uma ilha isolada da Irlanda, uma amizade termina abruptamente, provocando
+                        reações cômicas e sombrias sobre solidão e propósito.</div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Avatar: O Caminho da Água">
+            <div class="box">
+                <img src="/imagens/Votar_Filmes/Avatar_O_Caminho_Da_Agua.jpeg" alt="Avatar: O Caminho da Água">
+                <div class="info">
+                    <div class="title">Avatar: O Caminho da Água</div>
+                    <div class="descricao">Dois heróis lendários se encontram e enfrentam o Império Britânico em uma
+                        saga repleta de ação exagerada, músicas e emoção.</div>
+                </div>
+            </div>
+        </label>
+
+        <!-- Botão para enviar o voto -->
+        <div class="vote">
+            <input type="submit" value="Votar">
+        </div>
+    </form>
+
+    <!-- Rodapé do site -->
+    <footer>
+        <div class="footerContainer">
+            <!-- Ícones de redes sociais -->
+            <div class="socialicons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+            <!-- Navegação do rodapé -->
+            <div class="footerNav">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/Sobre/sobre.html">Sobre</a></li>
+                    <li><a href="/Categorias/categorias.html">Categorias</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Informação de copyright -->
+        <div class="footerBottom">
+            <p>Copyright &copy;2025; Feito por <span class="designer">Mateus, Phietro e Tiago</span></p>
+        </div>
+    </footer>
+
+    <!-- Importa o JavaScript externo que controla comportamentos da página -->
+    <script src="/main.js"></script>
+</body>
+
+</html>

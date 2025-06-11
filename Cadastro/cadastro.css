@@ -1,0 +1,132 @@
+/* Estilização geral do corpo da página */
+body {
+    margin: 0; /* Remove margens padrão */
+    background-color: #17223b; /* Cor de fundo escura */
+    color: aliceblue; /* Cor clara para o texto */
+    font-family: raleway; /* Fonte usada no texto */
+}
+
+/* Container principal da página */
+.principal {
+    width: 100%; /* Ocupa toda a largura da tela */
+    height: 100%; /* Ocupa toda a altura da tela */
+    display: flex; /* Usa flexbox para organizar os elementos */
+    align-items: center; /* Alinha verticalmente ao centro */
+}
+
+/* Cabeçalho fixo no topo esquerdo */
+.header {
+    position: fixed; /* Mantém fixo na tela */
+    z-index: 2; /* Coloca acima de outros elementos */
+    top: 50px; /* Distância do topo */
+    left: 50px; /* Distância da esquerda */
+    width: 200px; /* Largura do header */
+    height: 50px; /* Altura do header */
+}
+
+/* Tamanho do logo dentro do header */
+.logo {
+    width: 200px;
+}
+
+/* Responsividade para telas menores que 1107px */
+@media (max-width: 1107px) {
+    .header {
+        position: absolute; /* Deixa o header fluir com o conteúdo */
+        width: 100%; /* Ocupa toda a largura da tela */
+        height: 50px;
+        left: 50px;
+        top: 10px; /* Menor distância do topo */
+    }
+
+    .principal {
+        padding-top: 70px; /* Garante espaço para o header em telas pequenas */
+    }
+}
+
+/* Estilo da caixa com o título da página */
+.titulo {
+    width: 550px; /* Largura padrão */
+    max-width: 70%; /* Limite de largura para responsividade */
+    height: 80px;
+    font-size: 1.2rem;
+    margin: auto; /* Centraliza horizontalmente */
+    margin-bottom: 10%; /* Espaço abaixo */
+    margin-top: 7%; /* Espaço acima */
+}
+
+/* Provavelmente classe incorreta ou linha esquecida:
+titulo 
+*/
+
+/* Remove margens do texto do título */
+.textTitulo {
+    margin: 0;
+}
+
+/* ===== Formulário de cadastro/login ===== */
+
+/* Container geral do formulário */
+.formulario {
+    background-color: #043273; /* Azul escuro */
+    align-items: center; /* Alinha ao centro */
+    width: 550px;
+    max-width: 80%; /* Responsivo */
+    height: 650px;
+    border-radius: 45px; /* Borda arredondada */
+    text-align: center; /* Centraliza o conteúdo */
+    margin: auto; /* Centraliza horizontalmente */
+}
+
+/* Placeholder dos inputs */
+::placeholder {
+    color: #ffffff; /* Texto branco nos placeholders */
+}
+
+/* Inputs de usuário, email, senha e confirmação */
+.FormUsuarioEmailSenhaConf {
+    background-color: #17223b; /* Fundo escuro */
+    border-radius: 20px; /* Bordas arredondadas */
+    border: #ffffff solid 2px; /* Borda branca */
+    width: 445px;
+    max-width: 80%; /* Responsivo */
+    height: 60px;
+    font-size: 1.2rem;
+    margin-bottom: 2%; /* Espaço entre os campos */
+    padding: 13px; /* Espaço interno */
+    color: #ffffff; /* Cor do texto */
+}
+
+/* Container para os campos de usuário, email e senha */
+.divUsuarioEmailSenha {
+    margin-bottom: 7%; /* Espaço abaixo da div */
+}
+
+/* Estilização do checkbox */
+.checkbox {
+    width: 43%;
+    margin-left: 10%;
+    margin-right: auto;
+    text-align: start; /* Alinha texto à esquerda */
+}
+
+/* Botão de envio do formulário */
+.botaoEnviar {
+    background-color: #ffffff; /* Fundo branco */
+    width: 300px;
+    height: 50px;
+    margin-top: 12%; /* Espaço acima */
+    margin-bottom: 1%; /* Espaço abaixo */
+    border-radius: 50px; /* Bordas arredondadas tipo "pílula" */
+    border-style: none; /* Sem borda */
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer; /* Muda cursor ao passar o mouse */
+}
+
+/* Estilo das opções de login (como "Esqueci minha senha", "Cadastrar") */
+.OpcoesLogin {
+    margin: 0;
+    font-size: medium;
+    margin-top: 10px;
+}

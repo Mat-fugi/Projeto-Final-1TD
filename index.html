@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- Garante que o site funcione bem em dispositivos móveis -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+
+  <!-- Importa ícones do Google Fonts (Material Symbols) -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <!-- Importa fontes personalizadas do Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
+
+  <!-- Importa o arquivo de estilos externo (style.css) -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Importa ícones da biblioteca Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Ícone da aba do navegador -->
+  <link rel="shortcut icon" type="imagex/png" href="/imagens/logo.ico">
+</head>
+
+<body>
+  <!-- Cabeçalho principal da página com a navegação -->
+  <header class="main-header">
+    <nav class="nav_container">
+      <div class="nav_logo">
+        <!-- Logo do site -->
+        <a href="index.html">
+          <img src="/imagens/Logo_TheBest.png" alt="logo">
+        </a>
+      </div>
+      <div class="nav_elementos">
+        <ul class="nav_ul">
+          <!-- Links de navegação principais -->
+          <li class="nav_li"><a href="/index.html" class="link">Home</a></li>
+          <li class="nav_li"><a href="/Sobre/sobre.html" class="link">Sobre</a></li>
+
+          <!-- Menu com submenu de categorias -->
+          <li class="nav_li categorias">
+            <a href="/Categorias/categorias.html" class="link">Categorias</a>
+            <!-- Ícone de seta indicando dropdown -->
+            <span class="material-symbols-outlined dropdown_seta">arrow_drop_up</span>
+
+            <!-- Submenu com os links de categorias específicas -->
+            <div class="dropdown_container">
+              <a href="/Categorias/Filmes/Votar_Filmes.html" class="dropdown_link link">Filmes</a>
+              <a href="/Categorias/Animes/Votar_Animes.html" class="dropdown_link link">Animes</a>
+              <a href="/Categorias/Series/Votar_Series.html" class="dropdown_link link">Séries</a>
+              <a href="/Categorias/Jogos/Votar_Jogos.html" class="dropdown_link link">Jogos</a>
+              <a href="/Categorias/Livros/Votar_Livros.html" class="dropdown_link link">Livros</a>
+              <a href="Categorias/Atores/Votar_Atores.html" class="dropdown_link link">Atores</a>
+            </div>
+          </li>
+
+          <!-- Link para página de login/cadastro -->
+          <li class="nav_li entrar"><a href="/Cadastro/cadastro.php" class="link">Entrar</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Seção que explica como funciona a votação -->
+  <section class="como-funciona">
+    <h2><span>COMO</span><br><span>FUNCIONA?</span></h2>
+    <p>
+      Os indicados finais de cada categoria são escolhidos por jurados especialistas.
+      Depois, os fãs também votam para definir os vencedores.
+    </p>
+  </section>
+
+  <!-- Seção com carrossel de imagens clicáveis das categorias -->
+  <section class="fundoSection">
+    <!-- Container principal do carrossel -->
+    <div class="carrossel_container">
+      <div class="carrossel" id="carrossel">
+        <!-- Cada item é um link para votar em uma categoria -->
+        <a href="Categorias/Filmes/Votar_Filmes.html">
+          <div class="item item1"><img src="imagens/Filmes2.png" alt="Filmes"></div>
+        </a>
+        <a href="Categorias/Animes/Votar_Animes.html">
+          <div class="item item2"><img src="imagens/Animes2.png" alt="Séries"></div>
+        </a>
+        <a href="Categorias/Series/Votar_Series.html">
+          <div class="item item3"><img src="imagens/Séries2.png" alt="Animes"></div>
+        </a>
+        <a href="Categorias/Jogos/Votar_Jogos.html">
+          <div class="item item4"><img src="imagens/Jogos2.png" alt="Jogos"></div>
+        </a>
+        <a href="Categorias/Livros/Votar_Livros.html">
+          <div class="item item5"><img src="imagens/Livros2.png" alt="Livros"></div>
+        </a>
+        <a href="Categorias/Atores/Votar_Atores.html">
+          <div class="item item5"><img src="imagens/Atores.png" alt="Atores"></div>
+        </a>
+      </div>
+      <!-- Botões para navegar no carrossel -->
+      <button class="nav anterior" id="botaoAnterior" onclick="mover(-1)">&#10094;</button>
+      <button class="nav proximo" id="botaoProximo" onclick="mover(1)">&#10095;</button>
+    </div>
+  </section>
+
+  <section class="Destaques">
+    <h2 class="DestaquesTitulo">DESTAQUES</h2>
+
+    <div class="conteudoDestaques">
+      <div class="descricaoDestaques" id="descricaoDestaques">
+        <div class="conteudoDescricao fade-in-drop ativo" id="conteudo">
+          
+          <div class="descricao">
+            <span>FILMES</span>
+            <p>Qual filme merece o seu voto? Das teias do Aranhaverso aos maiores sucessos de bilheteria, a decisão está em suas mãos. Vote agora nos seus favoritos e ajude a coroar os campeões do cinema!</p>
+            <a href="Categorias/Filmes/Votar_Filmes.html"><button class="buttonVoteAgora">Vote Agora</button></a>
+          </div>
+
+          <div class="imgDescricao">
+            <img src="/imagens/destaques/MilesMorales.png" class="imgFundo" alt="Miles Morales">
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="navegadorLateral">
+        <button class="buttonDestaques button1" onclick="trocarItem(1)">
+          <img src="imagens/Filmes2.png">
+        </button>
+        <button class="buttonDestaques button2" onclick="trocarItem(2)">
+          <img src="imagens/Animes2.png">
+        </button>
+        <button class="buttonDestaques button3" onclick="trocarItem(3)">
+          <img src="imagens/Séries2.png">
+        </button>
+        <button class="buttonDestaques button3" onclick="trocarItem(4)">
+          <img src="imagens/Jogos2.png" alt="">
+        </button>
+        <button class="buttonDestaques button3" onclick="trocarItem(5)">
+          <img src="imagens/Livros2.png" alt="">
+        </button>
+        <button class="buttonDestaques button3" onclick="trocarItem(6)">
+          <img src="imagens/Atores.png" alt="">
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção com um temporizador de contagem regressiva para o fim da votação -->
+  <section>
+    <div class="temporizador">
+      <div class="container_temporizador">
+        <span>Votações acabam em:</span>
+        <div class="contador"></div> <!-- O contador será preenchido com JavaScript -->
+        <a href="/Categorias/categorias.html" class="linkContador">Vote Agora!</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé da página -->
+  <footer>
+    <div class="footerContainer">
+      <!-- Ícones de redes sociais -->
+      <div class="socialicons">
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-youtube"></i></a>
+        <a href=""><i class="fa-brands fa-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-tiktok"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+      </div>
+
+      <!-- Links úteis do site no rodapé -->
+      <div class="footerNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="/Sobre/sobre.html">Sobre</a></li>
+          <li><a href="/Categorias/categorias.html">Categorias</a></li>
+          <li><a href="">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Créditos no final da página -->
+    <div class="footerBottom">
+      <p>Copyright &copy;2025; Feito por <span class="designer">Mateus, Phietro e Tiago</span></p>
+    </div>
+  </footer>
+
+  <!-- Importa o arquivo JavaScript que controla o comportamento da página -->
+  <script src="main.js"></script>
+</body>
+
+</html>

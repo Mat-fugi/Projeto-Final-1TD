@@ -1,0 +1,120 @@
+/* Define o estilo geral do corpo da página */
+body {
+    margin: 0; /* Remove margem padrão do navegador */
+    background-color: #17223b; /* Cor de fundo azul escuro */
+    color: aliceblue; /* Cor padrão do texto */
+    font-family: raleway; /* Fonte usada no texto */
+}
+
+/* Container principal da página */
+.principal {
+    width: 100%; /* Ocupa toda a largura */
+    height: 100%; /* Ocupa toda a altura */
+    display: flex; /* Layout flexível */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+}
+
+/* Cabeçalho com a logo */
+.header {
+    position: fixed; /* Fixa o elemento na tela */
+    z-index: 2; /* Garante que fique sobre outros elementos */
+    top: 50px; /* Distância do topo da tela */
+    left: 50px; /* Distância da esquerda */
+    width: 200px; /* Largura do cabeçalho */
+    height: 50px; /* Altura do cabeçalho */
+}
+
+/* Define o tamanho da logo */
+.logo {
+    width: 200px; /* Largura da imagem da logo */
+}
+
+/* Estilo responsivo para telas menores que 1107px */
+@media (max-width: 1107px) {
+    .header {
+        position: absolute; /* Permite que o header se mova com a página */
+        width: 100%; /* Ocupa toda a largura da tela */
+        height: 50px; /* Mantém a altura */
+        left: 50px; /* Distância da esquerda */
+        top: 10px; /* Menor distância do topo em telas pequenas */
+    }
+    .principal {
+        padding-top: 70px; /* Adiciona espaço acima do conteúdo principal para evitar sobreposição com header */
+    }
+}
+
+/* Título do formulário */
+.titulo {
+    width: 550px; /* Largura padrão */
+    max-width: 70%; /* Ajusta a largura máxima para telas menores */
+    height: 80px; /* Altura da área do título */
+    font-size: 1.2rem; /* Tamanho da fonte */
+    margin: auto; /* Centraliza horizontalmente */
+    margin-bottom: 10%; /* Espaço abaixo do título */
+    margin-top: 7%; /* Espaço acima do título */
+}
+
+/* Estilo do texto do título */
+.textTitulo {
+    margin: 0; /* Remove margens padrão */
+}
+
+/* Estilização do formulário */
+.formulario {
+    background-color: #043273; /* Cor de fundo do formulário */
+    align-items: center; /* Centraliza os itens verticalmente (sem efeito aqui pois falta display:flex) */
+    width: 550px; /* Largura fixa */
+    max-width: 80%; /* Largura máxima relativa para responsividade */
+    height: 650px; /* Altura fixa */
+    border-radius: 45px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto internamente */
+    margin: auto; /* Centraliza horizontalmente na tela */
+}
+
+/* Estiliza o texto de placeholder dos inputs */
+::placeholder {
+    color: #ffffff; /* Cor branca para o texto de placeholder */
+}
+
+/* Campos de entrada: email e senha */
+.usuarioEmailSenha {
+    background-color: #17223b; /* Cor de fundo dos campos */
+    border-radius: 20px; /* Bordas arredondadas */
+    border: #ffffff solid 2px; /* Borda branca de 2px */
+    width: 445px; /* Largura fixa */
+    max-width: 80%; /* Largura máxima para responsividade */
+    height: 60px; /* Altura do campo */
+    font-size: 1.2rem; /* Tamanho da fonte */
+    margin-bottom: 2%; /* Espaçamento abaixo do campo */
+    padding: 13px; /* Espaçamento interno */
+    color: #ffffff; /* Cor do texto dentro do input */
+}
+
+/* Estilização da área do checkbox */
+.checkbox {
+    width: 80%; /* Largura da área do checkbox */
+    margin-left: 10%; /* Distância da esquerda */
+    margin-right: auto; /* Alinhamento automático à direita */
+    text-align: start; /* Alinha o texto à esquerda */
+    font-size: larger; /* Aumenta o tamanho da fonte */
+}
+
+/* Estilização do botão de confirmar login */
+.botaoConfirmar {
+    background-color: #ffffff; /* Cor de fundo branca */
+    width: 300px; /* Largura do botão */
+    height: 50px; /* Altura do botão */
+    margin-top: 12%; /* Espaço acima do botão */
+    margin-bottom: 1%; /* Espaço abaixo do botão */
+    border-radius: 50px; /* Bordas bem arredondadas */
+    border-style: none; /* Remove borda padrão */
+    font-size: large; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    cursor: pointer; /* Cursor muda para mãozinha */
+}
+
+/* Estilo para o parágrafo com opções de login */
+.OpicoesLoguin {
+    margin: 0; /* Remove margens padrão */
+    font-size: medium; /* Tamanho médio do texto */
+}

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<!-- Declara que este documento é um arquivo HTML5 -->
+<html lang="pt-BR">
+<!-- Elemento raiz da página, define o idioma como português do Brasil -->
+
+<head>
+    <!-- Contém informações meta, links e título da página -->
+
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres para UTF-8 -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a viewport para responsividade em dispositivos móveis -->
+
+    <title>Jogos</title>
+    <!-- Título que aparece na aba do navegador -->
+
+    <!--Importa ícones do Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- Link para importar os ícones Material Symbols do Google -->
+
+    <!-- Importa fonte do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Preconecta com o servidor do Google Fonts para otimizar carregamento -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Preconecta com o servidor de fontes estáticas do Google Fonts com permissão de CORS -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Importa a fonte 'Raleway' com pesos e estilos variados -->
+
+    <!-- Importa o CSS externo -->
+    <link rel="stylesheet" href="/Categorias/Animes/style.css">
+    <!-- Link para o arquivo CSS externo que estiliza a página -->
+
+    <!-- Importa ícones da Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CDN do Font Awesome para ícones, com integridade e política de referrer -->
+
+    <link rel="shortcut icon" type="imagex/png" href="/imagens/logo.ico">
+    <!-- Define o favicon da página que aparece na aba do navegador -->
+</head>
+
+<body>
+    <!-- Corpo principal da página -->
+
+    <!-- Cabeçalho principal -->
+    <header class="main-header">
+        <!-- Container do menu de navegação -->
+
+        <nav class="nav_container">
+            <!-- Container dos elementos do nav -->
+
+            <div class="nav_logo">
+                <!-- Área do logo -->
+                <a href="/index.html">
+                    <img src="/imagens/Logo_TheBest.png" alt="logo">
+                </a>
+                <!-- Imagem do logo -->
+            </div>
+
+            <div class="nav_elementos">
+                <!-- Container dos links do menu -->
+
+                <ul class="nav_ul">
+                    <!-- Lista principal de navegação -->
+
+                    <li class="nav_li">
+                        <!-- Item da lista -->
+                        <a href="/index.html" class="link">Home</a>
+                        <!-- Link para a página inicial -->
+                    </li>
+
+                    <li class="nav_li">
+                        <a href="/Sobre/sobre.html" class="link">Sobre</a>
+                        <!-- Link para a página sobre -->
+                    </li>
+
+                    <li class="nav_li categorias">
+                        <!-- Item com submenu de categorias -->
+                        <a href="/Categorias/categorias.html" class="link">Categorias</a>
+                        <span class="material-symbols-outlined dropdown_seta">arrow_drop_up</span>
+                        <!-- Ícone de seta para dropdown -->
+
+                        <div class="dropdown_container">
+                            <!-- Container do menu dropdown -->
+
+                            <a href="/Categorias/Filmes/Votar_Filmes.html" class="dropdown_link link">Filmes</a>
+                            <!-- Link para categoria Filmes -->
+
+                            <a href="/Categorias/Animes/Votar_Animes.html" class="dropdown_link link">Animes</a>
+                            <!-- Link para categoria Animes -->
+
+                            <a href="/Categorias/Series/Votar_Series.html" class="dropdown_link link">Séries</a>
+                            <!-- Link para categoria Séries -->
+
+                            <a href="/Categorias/Jogos/Votar_Jogos.html" class="dropdown_link link">Jogos</a>
+                            <!-- Link para categoria Jogos -->
+
+                            <a href="/Categorias/Livros/Votar_Livros.html" class="dropdown_link link">Livros</a>
+                            <!-- Link para categoria Livros -->
+
+                            <a href="/Categorias/Atores/Votar_Atores.html" class="dropdown_link link">Atores</a>
+                            <!-- Link para categoria Atores -->
+                        </div>
+                    </li>
+
+                    <li class="nav_li entrar">
+                        <a href="/Cadastro/cadastro.php" class="link">Entrar</a>
+                        <!-- Link para página de login/cadastro -->
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Seção do tópico da página -->
+    <div class="topico">
+        <div class="container_topico">
+            <!-- Container do título -->
+
+            <img src="/imagens/Votar_Jogos/Votar_Jogos_Titulo.png" alt="Jogos">
+            <!-- Imagem do título -->
+
+            <span>Jogos</span>
+            <!-- Texto do título -->
+        </div>
+    </div>
+
+    <!-- Formulário de votação -->
+    <form action="salvar_voto.php" method="post">
+        <!-- Envia os dados via POST para salvar_voto.php -->
+
+        <!-- Opção Elden Ring -->
+        <label style="margin-top: 20px;">
+            <!-- Label que envolve o input e o conteúdo para facilitar clique -->
+
+            <input type="radio" name="Anime" value="Elden Ring">
+            <!-- Input do tipo rádio com nome 'Anime' e valor 'Elden Ring' -->
+
+            <div class="box">
+                <!-- Container que agrupa imagem e informações -->
+
+                <img src="/imagens/Votar_Jogos/Elden_Ring.jpg" alt="Elden Ring">
+                <!-- Imagem do jogo -->
+
+                <div class="info">
+                    <!-- Texto de título e descrição -->
+
+                    <div class="title">Elden Ring</div>
+                    <!-- Nome do jogo -->
+
+                    <div class="descricao">
+                        Elden Ring é um jogo eletrônico de RPG de ação em terceira pessoa,
+                        desenvolvido pela FromSoftware e publicado pela Bandai Namco Entertainment. O jogo é um projeto
+                        colaborativo entre o diretor Hidetaka Miyazaki e o romancista de fantasia George R. R. Martin.
+                    </div>
+                    <!-- Descrição do jogo -->
+                </div>
+            </div>
+        </label>
+
+        <!-- Opção Baldur's Gate III -->
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Baldur's Gate III">
+            <div class="box">
+                <img src="/imagens/Votar_Jogos/Baldurs_Gate.jpg" alt="Baldur's Gate III (2022)">
+                <div class="info">
+                    <div class="title">Baldur's Gate III</div>
+                    <div class="descricao">
+                        Baldur's Gate III é um jogo eletrônico de RPG desenvolvido e publicado pela
+                        Larian Studios. É o terceiro jogo principal da série Baldur's Gate, que é baseada no sistema de
+                        RPG de mesa Dungeons & Dragons, dentro do cenário de Forgotten Realms.
+                    </div>
+                </div>
+            </div>
+        </label>
+
+        <!-- Opção Astro Bot -->
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Astro Bot">
+            <div class="box">
+                <img src="/imagens/Votar_Jogos/Astro_Bot.jfif" alt="Astro Bot">
+                <div class="info">
+                    <div class="title">Astro Bot</div>
+                    <div class="descricao">
+                        Astro Bot é um jogo eletrônico de plataforma de 2024 desenvolvido pela Team
+                        Asobi e publicado pela Sony Entertainment para o PlayStation 5. É o quinto título da série de
+                        jogos Astro Bot, sucedendo Astro's Playroom, e o primeiro jogo desenvolvido pela Team Asobi após
+                        sua separação do Japan Studio.
+                    </div>
+                </div>
+            </div>
+        </label>
+
+        <!-- Opção Zelda: Tears of the Kingdom -->
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Zelda: Tears of the Kingdom">
+            <div class="box">
+                <img src="/imagens/Votar_Jogos/Zelda_Tears_Of_The_Kingdom.jpg" alt="Zelda: Tears of the Kingdom">
+                <div class="info">
+                    <div class="title">Zelda: Tears of the Kingdom</div>
+                    <div class="descricao">
+                        The Legend of Zelda: Tears of the Kingdom é um jogo eletrônico de
+                        ação-aventura desenvolvido e publicado pela Nintendo. Foi lançado em 12 de maio de 2023 para
+                        Nintendo Switch. Ele faz parte da série The Legend of Zelda, e é a sequência de The Legend of
+                        Zelda: Breath of the Wild
+                    </div>
+                </div>
+            </div>
+        </label>
+
+        <!-- Opção Final Fantasy VII Rebirth -->
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Final Fantasy VII Rebirth">
+            <div class="box">
+                <img src="/imagens/Votar_Jogos/Final_Fantasy_VII_Rebirth.jpg" alt="Final Fantasy VII Rebirth">
+                <div class="info">
+                    <div class="title">Final Fantasy VII Rebirth</div>
+                    <div class="descricao">
+                        Final Fantasy VII Rebirth (ファイナルファンタジーVII リバース) é um
+                        RPG eletrônico desenvolvido e publicado pela Square Enix para PlayStation 5. É a segunda parte
+                        da trilogia Final Fantasy VII Remake e é uma sequência direta do Final Fantasy VII Remake,
+                        lançado em 2020.
+                    </div>
+                </div>
+            </div>
+        </label>
+
+        <!-- Opção Resident Evil 4 -->
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Resident Evil 4 Remake">
+            <div class="box">
+                <img src="/imagens/Votar_Jogos/Resident_Evil_4_Remake.png" alt="Resident Evil 4 Remake">
+                <div class="info">
+                    <div class="title">Resident Evil 4 Remake</div>
+                    <div class="descricao">O jovem Paul Atreides descobre seu destino em meio a traições, guerras e
+                        profecias no planeta desértico Arrakis, onde o recurso mais valioso do universo é controlado.
+                    </div>
+                </div>
+            </div>
+        </label>
+
+        <!-- Opção Marvel's Spider-Man 2 -->
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Marvel's Spider-Man 2">
+            <div class="box">
+                <img src="/imagens/Votar_Jogos/Marvels_Spiderman_2.jfif" alt="Marvel's Spider-Man 2">
+                <div class="info">
+                    <div class="title">Marvel's Spider-Man 2</div>
+                    <div class="descricao">A continuação da jornada de Paul, agora liderando os Fremen em uma guerra
+                        contra o império. Uma mistura de ação, espiritualidade e política interestelar.
+
+                    </div>
+                </div>
+            </div>
+        </label>
+        <!-- Opção Stray -->
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Stray">
+            <div class="box">
+                <img src="/imagens/Votar_Jogos/Stray.jfif" alt="Stray">
+                <div class="info">
+                    <div class="title">Stray</div>
+                    <div class="descricao">Em uma ilha isolada da Irlanda, uma amizade termina abruptamente, provocando
+                        reações cômicas e sombrias sobre solidão e propósito.</div>
+                </div>
+            </div>
+        </label>
+
+        <!-- Opção Metroid Dread -->
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Metroid Dread">
+            <div class="box">
+                <img src="/imagens/Votar_Jogos/Metroid_Dead.jpeg" alt="Metroid Dread">
+                <div class="info">
+                    <div class="title">Metroid Dread</div>
+                    <div class="descricao">Dois heróis lendários se encontram e enfrentam o Império Britânico em uma
+                        saga repleta de ação exagerada, músicas e emoção.</div>
+                </div>
+            </div>
+        </label>
+
+        <!-- Opção Hades -->
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Hades">
+            <div class="box">
+                <img src="/imagens/Votar_Jogos/Hades.jpg" alt="Hades">
+                <div class="info">
+                    <div class="title">Hades</div>
+                    <div class="descricao">Uma imigrante chinesa comum é arrastada para uma aventura multiversal
+                        caótica, onde precisa salvar a realidade – enquanto lida com família e identidade.</div>
+                </div>
+            </div>
+        </label>
+
+        <!-- Botão para enviar o formulário -->
+        <div class="vote">
+            <input type="submit" value="Votar">
+        </div>
+    </form>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <div class="footerContainer">
+            <div class="socialicons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/Sobre/sobre.html">Sobre</a></li>
+                    <li><a href="/Categorias/categorias.html">Categorias</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy;2025; Feito por <span class="designer">Mateus, Phietro e Tiago</span></p>
+        </div>
+    </footer>
+
+    <!-- Importa o JavaScript externo -->
+    <script src="/main.js"></script>
+</body>
+
+</html>

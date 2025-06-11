@@ -1,0 +1,620 @@
+/* Reset básico para evitar inconsistências entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Inclui padding e border no cálculo do tamanho total */
+}
+
+/* Define a fonte global da página */
+body {
+    font-family: 'Raleway';
+}
+
+/* Estilo principal do cabeçalho fixo no topo */
+.main-header {
+    background-color: #06489f;
+    /* Fundo azul escuro */
+    color: white;
+    /* Texto branco */
+    width: 100%;
+    /* Ocupa toda a largura da tela */
+    height: 64px;
+    display: flex;
+    /* Permite alinhamento com flexbox */
+    justify-content: center;
+    /* Centraliza os elementos horizontalmente */
+    position: fixed;
+    /* Fixa o header no topo, mesmo com rolagem */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    /* Garante que fique acima de outros elementos */
+    transition: transform 0.3s ease-in-out;
+    /* Suaviza animações de entrada/saída */
+}
+
+/* Classe auxiliar para ocultar o cabeçalho com animação */
+.esconder_Header {
+    transform: translateY(-100%);
+    /* Move o header para fora da tela verticalmente */
+}
+
+/* Container da barra de navegação */
+.nav_container {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* Espaça os itens entre os cantos */
+}
+
+/* Área que contém o logo */
+.nav_logo {
+    display: flex;
+    align-items: center;
+    width: 15%;
+}
+
+/* Redimensiona a imagem do logo */
+.nav_logo img {
+    width: 75%;
+}
+
+/* Container dos links de navegação */
+.nav_elementos {
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+/* Lista não ordenada que agrupa os itens de navegação */
+.nav_ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    /* Remove marcadores padrão */
+}
+
+/* Estilo dos itens da navegação */
+.nav_li {
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* Necessário para posicionar o dropdown */
+}
+
+/* Ícone + texto de categorias */
+.categorias {
+    display: flex;
+    align-items: center;
+}
+
+/* Destaque visual para o botão "entrar" */
+.entrar {
+    font-weight: bold;
+}
+
+/* Estilo padrão para links */
+.link {
+    color: white;
+    text-decoration: none;
+    /* Remove sublinhado */
+}
+
+/* Estilo para ícones do Google Fonts */
+.material-symbols-outlined {
+    color: white;
+}
+
+/* Dropdown oculto inicialmente */
+.dropdown_container {
+    overflow: hidden;
+    position: absolute;
+    top: 100%;
+    /* Aparece abaixo do item pai */
+    left: 0;
+    background-color: #1a3f8a;
+    /* Tom mais escuro para contraste */
+    z-index: 1;
+    border: 5px;
+    max-height: 0;
+    /* Oculta o conteúdo */
+    opacity: 0;
+    transform: translateY(-10px);
+    /* Leve subida ao aparecer */
+    pointer-events: none;
+    /* Evita interações quando oculto */
+    transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Estilo dos links dentro do dropdown */
+.dropdown_link {
+    padding: 10px 15px;
+    display: block;
+    /* Garante que ocupem uma linha inteira */
+}
+
+/* Efeito hover para itens do dropdown */
+.dropdown_container a:hover {
+    background-color: #2b56bb;
+}
+
+/* Mostra o dropdown ao passar o mouse */
+.nav_ul li:hover .dropdown_container {
+    display: block;
+    max-height: 500px;
+    /* Permite o conteúdo expandir */
+    opacity: 1;
+    transform: translateY(0);
+    /* Retorna à posição original */
+    pointer-events: auto;
+}
+
+/* Ícone de seta no item "Categorias" */
+.dropdown_seta {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* Gira a seta ao passar o mouse */
+.nav_ul li:hover .dropdown_seta {
+    transform: rotate(180deg);
+}
+
+/* Seção explicativa "Como Funciona" */
+.como-funciona {
+    max-width: 800px;
+    /* Limita largura para facilitar leitura */
+    margin: 60px auto;
+    padding: 64px 20px 0px;
+    text-align: left;
+}
+
+/* Título da seção */
+.como-funciona h2 {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #000;
+    line-height: 0.5;
+    margin-bottom: 30px;
+}
+
+/* Força quebra de linha nos títulos */
+.como-funciona h2 span {
+    display: block;
+}
+
+/* Texto descritivo da seção */
+.como-funciona p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #111;
+    text-align: justify;
+    margin-bottom: 50px;
+}
+
+/* Fundo levemente fosco para seções */
+.fundoSection {
+    background-color: rgba(217, 217, 217, 0.3);
+    padding: 2%;
+}
+
+/* Container do carrossel */
+.carrossel_container {
+    position: relative;
+    overflow: hidden;
+    justify-self: center;
+    width: 50%;
+    height: 400px;
+}
+
+/* Carrossel que desliza os slides horizontalmente */
+.carrossel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 400px;
+}
+
+/* Cada item é um link que ocupa o carrossel inteiro */
+.carrossel>a {
+    display: flex;
+    min-width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Estilo dos itens do carrossel */
+.item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Imagem dos slides */
+.item img {
+    width: 400px;
+    transition: 0.5s ease-in-out;
+}
+
+/* Efeito zoom-out ao passar o mouse */
+.item:hover img {
+    transform: scale(0.9);
+}
+
+/* Botões de navegação do carrossel */
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Botão "anterior" */
+.anterior {
+    left: 10px;
+}
+
+/* Botão "próximo" */
+.proximo {
+    right: 10px;
+}
+
+/* Seção de destaques */
+.Destaques {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+/* Centraliza título da seção */
+.DestaquesTitulo {
+    text-align: center;
+}
+
+/* Estilo do título */
+.Destaques h2 {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #000;
+    /* Cor do título */
+    line-height: 0.5;
+    margin-bottom: 30px;
+}
+
+/* Texto complementar */
+.Destaques p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: white;
+    /* Alterado para branco para contraste com o fundo azul */
+    text-align: justify;
+    margin-bottom: 50px;
+}
+
+/* Layout dos destaques */
+.conteudoDestaques {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 64px;
+}
+
+/* Descrição do destaque - container principal que segura o conteúdo e a imagem */
+.descricaoDestaques {
+    width: 60%;
+    height: 600px;
+    /* Mantido para ter uma altura fixa, ajuste conforme necessário */
+    display: flex;
+    /* Torna-o um container flex para alinhar o .conteudoDescricao */
+    justify-content: center;
+    align-items: center;
+    background-color: #204379;
+    /* Cor de fundo */
+    transition: all 0.4s ease;
+    overflow: hidden;
+    /* Garante que nada saia dos limites, se a imagem for grande */
+    position: relative;
+    /* Importante para posicionamento absoluto, se usado */
+}
+
+/* Container interno da descrição (aqui vai o layout da imagem e texto) */
+.conteudoDescricao {
+    width: 100%;
+    height: 100%;
+    /* Removido o padding daqui, será colocado nos filhos se necessário */
+    display: flex;
+    /* Torna-o um container flex para os elementos internos */
+    align-items: center;
+    /* Alinha verticalmente os itens no centro */
+    justify-content: space-between;
+    /* Espaço entre os itens (descrição e imagem) */
+    position: relative;
+    /* Se for sobrepor elementos */
+}
+
+/* Estilo do ícone decorativo (FILMES) */
+.conteudoDescricao span {
+    font-family: "Modak", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: orange;
+    font-size: 100px;
+}
+
+/* Texto da descrição */
+.descricao {
+    /* Removido position: absolute; para que flua com flexbox */
+    /* Removido margin-bottom: 10px%; pois pode ser controlado por padding/gap */
+    color: white;
+    /* Alterado para branco para contraste com o fundo azul */
+    /* z-index: 4; - Não é necessário se não há sobreposição */
+    padding: 20px;
+    /* Adicionado padding para afastar do canto */
+    flex: 1;
+    /* Ocupa o espaço disponível, permitindo que a imagem ocupe o dela */
+    width: 50%;
+    /* Ocupa a altura disponível, permitindo que a descrição seja movida ao topo do container */
+    height: 100%;
+    /* Limita a largura da descrição */
+    display: flex;
+    /* Para alinhar o conteúdo interno (span, p, button) */
+    flex-direction: column;
+    /* Centraliza verticalmente o conteúdo da descrição */
+    align-items: flex-start;
+    /* Alinha o texto à esquerda */
+    position: absolute;
+}
+
+/* Container da imagem */
+.imgDescricao {
+    width: 100%;
+    /* Ocupa a outra metade do espaço */
+    height: 100%;
+    /* Ocupa toda a altura do pai */
+    display: flex;
+    /* Para centralizar a imagem dentro dela */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    overflow: hidden;
+    /* Garante que a imagem não transborde */
+}
+
+/* A imagem em si */
+.imgFundo {
+    width: 100%;
+    /* Ocupa a largura total do seu container (.imgDescricao) */
+    height: auto;
+    /* Ocupa a altura total do seu container */
+    object-fit: cover;
+    /* Recorta a imagem para cobrir o container sem distorcer */
+    display: block;
+    /* Remove possíveis espaços extras de elementos inline */
+}
+
+
+/* Botão de voto */
+.buttonVoteAgora {
+    padding: 10px 20px;
+    /* Adicionado padding horizontal */
+    /* margin: auto; - Removido, o flexbox do .descricao cuidará do alinhamento */
+    border: none;
+    border-radius: 10px;
+    background-color: orange;
+    font-family: "Raleway";
+    width: auto;
+    /* Ajuste a largura automaticamente */
+    height: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    /* Adicionado cursor pointer */
+}
+
+/* Navegação lateral com botões */
+.navegadorLateral {
+    /* position: absolute; - Se você quer que flutue, ok. Mas pode estar sobrepondo */
+    /* Se você quer que fique abaixo do conteudoDestaques, remova o absolute */
+    /* Ajustei o margin-top, mas dependerá do seu layout final */
+    position: relative;
+    /* Mais seguro se quiser que siga o fluxo do documento */
+    margin-top: 20px;
+    /* Um espaço abaixo da .descricaoDestaques */
+    z-index: 5;
+    display: flex;
+    gap: 20px;
+    width: 65%;
+    /* Largura dos botões */
+    justify-content: center;
+    /* Centraliza os botões */
+    align-self: center;
+    /* Centraliza o navegadorLateral dentro do conteudoDestaques */
+}
+
+/* Botões de navegação lateral */
+.buttonDestaques {
+    width: 100px;
+    /* Largura fixa para os botões */
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    transition: 0.3s ease;
+}
+.buttonDestaques img{
+    width: 100%;
+}
+
+
+/* Efeito hover nos botões */
+.buttonDestaques:hover {
+    transform: scale(1.05);
+}
+
+/* Animação de fade com queda */
+.fade-in-drop {
+    opacity: 0;
+    transform: translateY(-75px);
+    transition: all 0.5s ease;
+}
+
+/* Estado ativo da animação */
+.fade-in-drop.ativo {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Temporizador de contagem regressiva */
+.temporizador {
+    width: 100%;
+    height: 400px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container do temporizador */
+.container_temporizador {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-style: 'Raleway';
+    font-weight: bold;
+    font-size: 48px;
+    text-align: center;
+    color: white;
+}
+
+/* Números do contador */
+.contador {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 64px;
+}
+
+/* Link abaixo do contador */
+.linkContador {
+    font-size: 32px;
+    color: white;
+    transition: ease 0.3s;
+}
+
+.linkContador:hover {
+    text-shadow: 2px 2px 5px white, 2px 2px 20px white;
+    transform: scale(1.02);
+}
+
+.linkContador:visited {
+    color: white;
+}
+
+/* Rodapé */
+footer {
+    background-color: #06489f;
+}
+
+/* Container geral do rodapé */
+.footerContainer {
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+/* Ícones de redes sociais */
+.socialicons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialicons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialicons a i {
+    font-size: 2em;
+    color: #06489f;
+    opacity: 0.9;
+}
+
+/* Efeito hover nos ícones */
+.socialicons a:hover {
+    background-color: #06489f;
+    transition: 0.5s;
+}
+
+.socialicons a i:hover {
+    color: white;
+    transition: 0.5s;
+}
+
+/* Navegação do rodapé */
+.footerNav {
+    margin: 30px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.footerNav ul li a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+}
+
+/* Base do rodapé com créditos */
+.footerBottom {
+    background-color: #06489f;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: white;
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+/* Ajustes responsivos para telas pequenas */
+@media (max-width: 700px) {
+    .footerNav ul {
+        flex-direction: column;
+    }
+
+    .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+}

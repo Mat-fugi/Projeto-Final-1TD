@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<!-- Declara que este documento está usando o padrão HTML5 -->
+<html lang="pt-BR">
+<!-- Define que o idioma da página é português do Brasil -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 para suportar caracteres especiais -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define as configurações de visualização para dispositivos móveis, para responsividade -->
+
+    <title>Animes</title>
+    <!-- Título que aparece na aba do navegador -->
+
+    <!--Importa ícones do Google Fonts Material Symbols (ícones outlined)-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <!-- Preconnect para acelerar o carregamento das fontes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Importa a fonte Raleway, com variações de peso e itálico -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Importa o arquivo CSS externo para estilização da página -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Importa os ícones da Font Awesome para uso de ícones sociais e outros -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Define o favicon da página (ícone mostrado na aba do navegador) -->
+    <link rel="shortcut icon" type="imagex/png" href="/imagens/logo.ico">
+
+</head>
+
+<body>
+    <!-- Cabeçalho principal da página -->
+    <header class="main-header">
+        <nav class="nav_container">
+            <!-- Container do logo -->
+            <div class="nav_logo">
+                <!-- Imagem do logo -->
+                <a href="/index.html">
+                    <img src="/imagens/Logo_TheBest.png" alt="logo">
+                </a>
+            </div>
+
+            <!-- Container dos itens do menu de navegação -->
+            <div class="nav_elementos">
+                <ul class="nav_ul">
+                    <!-- Item de menu para página inicial -->
+                    <li class="nav_li"><a href="/index.html" class="link">Home</a></li>
+
+                    <!-- Item de menu para página Sobre -->
+                    <li class="nav_li"><a href="/Sobre/sobre.html" class="link">Sobre</a></li>
+
+                    <!-- Item com submenu dropdown para categorias -->
+                    <li class="nav_li categorias">
+                        <a href="/Categorias/categorias.html" class="link">Categorias</a>
+                        <!-- Ícone da seta para indicar dropdown -->
+                        <span class="material-symbols-outlined dropdown_seta">arrow_drop_up</span>
+
+                        <!-- Container do submenu dropdown -->
+                        <div class="dropdown_container">
+                            <a href="/Categorias/Filmes/Votar_Filmes.html" class="dropdown_link link">Filmes</a>
+                            <a href="/Categorias/Animes/Votar_Animes.html" class="dropdown_link link">Animes</a>
+                            <a href="/Categorias/Series/Votar_Series.html" class="dropdown_link link">Séries</a>
+                            <a href="/Categorias/Jogos/Votar_Jogos.html" class="dropdown_link link">Jogos</a>
+                            <a href="/Categorias/Livros/Votar_Livros.html" class="dropdown_link link">Livros</a>
+                            <a href="/Categorias/Atores/Votar_Atores.html" class="dropdown_link link">Atores</a>
+                        </div>
+                    </li>
+
+                    <!-- Item de menu para login/cadastro -->
+                    <li class="nav_li entrar"><a href="/Cadastro/cadastro.php" class="link">Entrar</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Seção com título e imagem principal do tópico da página -->
+    <div class="topico">
+        <div class="container_topico">
+            <!-- Imagem ilustrativa do título -->
+            <img src="/imagens/Votar_Animes/Votar_Animes_Titulo.png" alt="Animes">
+            <!-- Texto do título -->
+            <span>Animes</span>
+        </div>
+    </div>
+
+    <!-- Formulário para envio da votação -->
+    <form action="salvar_voto.php" method="post">
+        <!-- Cada label é uma opção de voto com radio button -->
+
+        <label style="margin-top: 20px;">
+            <!-- Radio input para votar no anime One Piece -->
+            <input type="radio" name="Anime" value="One Piece">
+            <div class="box">
+                <!-- Imagem representando One Piece -->
+                <img src="/imagens/Votar_Animes/One_Piece.png" alt="One Piece">
+                <div class="info">
+                    <!-- Nome do anime -->
+                    <div class="title">One Piece</div>
+                    <!-- Descrição resumida do anime -->
+                    <div class="descricao">Monkey D. Luffy e sua tripulação continuam a jornada em busca do lendário
+                        tesouro One Piece. Com o arco de Wano e o início da saga final, a obra atingiu novos picos de
+                        popularidade e emoção.</div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <!-- Radio input para votar em Attack on Titan -->
+            <input type="radio" name="Anime" value="Attack on Titan: O Último Ataque">
+            <div class="box">
+                <img src="/imagens/Votar_Animes/Attack_on_Titan.jpg" alt="Attack on Titan: O Último Ataque">
+                <div class="info">
+                    <div class="title">Attack on Titan: O Último Ataque</div>
+                    <div class="descricao">Em um mundo cercado por muralhas gigantes, Eren Yeager luta contra titãs
+                        devoradores de humanos. A última temporada aprofunda questões políticas, filosóficas e morais,
+                        com reviravoltas impactantes.</div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <!-- Radio input para votar em Demon Slayer -->
+            <input type="radio" name="Anime" value="Demon Slayer: Kimetsu no Yaiba">
+            <div class="box">
+                <img src="/imagens/Votar_Animes/Demon_Slayer.jpg" alt="Demon Slayer: Kimetsu no Yaiba">
+                <div class="info">
+                    <div class="title">Demon Slayer: Kimetsu no Yaiba</div>
+                    <div class="descricao">Após sua família ser massacrada por demônios, Tanjiro Kamado busca vingança e
+                        cura para sua irmã Nezuko. Destaque para animação impressionante e lutas emocionantes.</div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <!-- Radio input para votar em Jujutsu Kaisen -->
+            <input type="radio" name="Anime" value="Jujutsu Kaisen">
+            <div class="box">
+                <img src="/imagens/Votar_Animes/Jujutsu_Kaisen.jpg" alt="Jujutsu Kaisen">
+                <div class="info">
+                    <div class="title">Jujutsu Kaisen</div>
+                    <div class="descricao">Yuji Itadori entra em uma escola de feiticeiros após ingerir um artefato
+                        amaldiçoado. Mistura ação sobrenatural, humor e coreografias de luta de tirar o fôlego.</div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <!-- Radio input para votar em Chainsaw Man -->
+            <input type="radio" name="Anime" value="Chainsaw Man">
+            <div class="box">
+                <img src="/imagens/Votar_Animes/Chainsaw_Man.jpg" alt="Chainsaw Man">
+                <div class="info">
+                    <div class="title">Chainsaw Man</div>
+                    <div class="descricao">Denji, um jovem caçador de demônios, renasce como uma criatura com
+                        motosserras após trair a morte. Um anime brutal, sarcástico e cheio de surpresas.</div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <!-- Radio input para votar em Spy x Family -->
+            <input type="radio" name="Anime" value="Spy x Family">
+            <div class="box">
+                <img src="/imagens/Votar_Animes/Spy_x_Family.jpg" alt="Spy x Family">
+                <div class="info">
+                    <div class="title">Spy x Family</div>
+                    <div class="descricao">Um espião precisa formar uma família falsa para cumprir uma missão — sem
+                        saber que a esposa é uma assassina e a filha, uma telepata. Mistura ação, comédia e muita
+                        fofura.</div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <!-- Radio input para votar em Tokyo Revengers -->
+            <input type="radio" name="Anime" value="Tokyo Revengers">
+            <div class="box">
+                <img src="/imagens/Votar_Animes/Tokyo_Revengers.jpg" alt="Tokyo Revengers">
+                <div class="info">
+                    <div class="title">Tokyo Revengers</div>
+                    <div class="descricao">Takemichi volta no tempo para tentar salvar a ex-namorada e mudar o destino
+                        de uma gangue. Drama adolescente com ação de gangues e viagens temporais.</div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <!-- Radio input para votar em Blue Lock -->
+            <input type="radio" name="Anime" value="Blue Lock">
+            <div class="box">
+                <img src="/imagens/Votar_Animes/Blue_Lock.jpg" alt="Blue Lock">
+                <div class="info">
+                    <div class="title">Blue Lock</div>
+                    <div class="descricao">Após a derrota do Japão na Copa do Mundo, jovens atacantes são confinados em
+                        um “campo-prisão” onde só o mais egoísta e habilidoso sobrevive. Um anime esportivo com espírito
+                        de batalha shonen.</div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <!-- Radio input para votar em Hell's Paradise -->
+            <input type="radio" name="Anime" value="Hell’s Paradise: Jigokuraku">
+            <div class="box">
+                <img src="/imagens/Votar_Animes/Hells_Paradise.jpg" alt="Hell’s Paradise: Jigokuraku">
+                <div class="info">
+                    <div class="title">Hell’s Paradise: Jigokuraku</div>
+                    <div class="descricao">Um ninja condenado à morte é enviado a uma ilha misteriosa para buscar o
+                        elixir da imortalidade. Um anime sangrento com temas de redenção e sobrevivência.</div>
+                </div>
+            </div>
+        </label>
+
+        <!-- Radio input para votar em Frieren -->
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Frieren: Beyond Journey’s End">
+            <div class="box">
+                <img src="/imagens/Votar_Animes/Frieren_Beyond_Journeys_End.jpg" alt="Frieren: Beyond Journey’s End">
+                <div class="info">
+                    <div class="title">Frieren: Beyond Journey’s End</div>
+                    <div class="descricao">Após derrotar o grande vilão, a elfa maga Frieren começa uma nova jornada
+                        para entender melhor os humanos. Uma história melancólica e contemplativa sobre o tempo e os
+                        vínculos.</div>
+                </div>
+            </div>
+        </label>
+
+        <!-- Botão para enviar o formulário -->
+        <div class="vote">
+            <input type="submit" value="Votar">
+        </div>
+    </form>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <div class="footerContainer">
+            <div class="socialicons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/Sobre/sobre.html">Sobre</a></li>
+                    <li><a href="/Categorias/categorias.html">Categorias</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy;2025; Feito por <span class="designer">Mateus, Phietro e Tiago</span></p>
+        </div>
+    </footer>
+</body>
+
+</html>

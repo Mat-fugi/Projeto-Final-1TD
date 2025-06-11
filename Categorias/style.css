@@ -1,0 +1,302 @@
+/* Reset básico para evitar inconsistências entre navegadores */
+* {
+    margin: 0;                     /* Remove margens padrão */
+    padding: 0;                    /* Remove espaçamentos padrão */
+    box-sizing: border-box;       /* Inclui bordas e padding na largura total */
+}
+
+/* Define a fonte base do corpo da página */
+body {
+    font-family: 'Raleway';       /* Usa a fonte Raleway carregada no HTML */
+}
+
+/* Estilo principal do cabeçalho */
+.main-header {
+    background-color: #06489f;    /* Cor de fundo azul escuro */
+    color: white;                 /* Cor do texto */
+    width: 100%;                  /* Ocupa toda a largura da tela */
+    height: 64px;                 /* Altura fixa do cabeçalho */
+    display: flex;                /* Torna o container flexível */
+    justify-content: center;     /* Centraliza os itens horizontalmente */
+    position: fixed;             /* Fixa o cabeçalho no topo da tela */
+    top: 0;
+    left: 0;
+    z-index: 1000;               /* Garante que fique sobreposto a outros elementos */
+    transition: transform 0.3s ease-in-out; /* Suaviza a transição ao esconder */
+}
+
+/* Classe usada para esconder o header (ex: ao rolar a página) */
+.esconder_Header {
+    transform: translateY(-100%); /* Move o header para fora da tela verticalmente */
+}
+
+/* Container da navegação dentro do header */
+.nav_container {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between; /* Espaça logo e menu */
+}
+
+/* Estilo da logo */
+.nav_logo {
+    display: flex;
+    align-items: center;
+    width: 15%;                   /* Ocupa 15% do espaço disponível */
+}
+
+/* Tamanho da imagem da logo */
+.nav_logo img {
+    width: 75%;
+}
+
+/* Container dos links de navegação */
+.nav_elementos {
+    width: 30%;                   /* Ocupa 30% do espaço do header */
+    display: flex;
+    align-items: center;
+}
+
+/* Lista de navegação */
+.nav_ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;             /* Remove marcadores da lista */
+}
+
+/* Estilo geral dos itens da navegação */
+.nav_li {
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;          /* Necessário para posicionar o dropdown */
+}
+
+/* Categoria com submenu (dropdown) */
+.categorias {
+    display: flex;
+    align-items: center;
+}
+
+/* Destaque no link "entrar" */
+.entrar {
+    font-weight: bold;
+}
+
+/* Estilização padrão de links */
+.link {
+    color: white;
+    text-decoration: none;       /* Remove sublinhado */
+}
+
+/* Ícones do Google Fonts */
+.material-symbols-outlined {
+    color: white;
+}
+
+/* Container do dropdown (submenu de categorias) */
+.dropdown_container {
+    overflow: hidden;
+    position: absolute;
+    top: 100%;                    /* Posiciona abaixo do item pai */
+    left: 0;
+    background-color: #1a3f8a;
+    z-index: 1;
+    border: 5px;
+    max-height: 0;               /* Oculta o conteúdo inicialmente */
+    opacity: 0;
+    transform: translateY(-10px); /* Move um pouco para cima */
+    pointer-events: none;        /* Impede cliques enquanto oculto */
+    transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Links dentro do dropdown */
+.dropdown_link {
+    padding: 10px 15px;
+    display: block;
+}
+
+/* Efeito ao passar o mouse nos itens do dropdown */
+.dropdown_container a:hover {
+    background-color: #2b56bb;
+}
+
+/* Exibe o dropdown ao passar o mouse */
+.nav_ul li:hover .dropdown_container {
+    display: block;
+    max-height: 500px;           /* Altura suficiente para mostrar o conteúdo */
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;        /* Habilita cliques */
+}
+
+/* Ícone da seta do dropdown */
+.dropdown_seta {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* Rotaciona a seta ao abrir o dropdown */
+.nav_ul li:hover .dropdown_seta {
+    transform: rotate(180deg);
+}
+
+.alinhamento {
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.lista_container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+.item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #001f3f;   /* Azul escuro */
+    color: white;
+    border-radius: 20px;
+    transition: transform 0.5s ease;
+}
+
+.item:hover {
+    transform: scale(0.95);      /* Leve redução para dar efeito de clique */
+    transition: 0.5s ease;
+}
+
+.item a {
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item a img {
+    margin-top: 10px;
+    width: 70%;
+}
+
+.item p {
+    margin: 20px;
+    color: white;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.texto {
+    max-width: none;
+}
+
+/* Estilização geral do rodapé */
+footer {
+    background-color: #06489f;
+}
+
+/* Container principal do rodapé */
+.footerContainer {
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+/* Ícones de redes sociais */
+.socialicons {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo dos links dos ícones */
+.socialicons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;          /* Formato circular */
+}
+
+/* Ícones dentro dos links */
+.socialicons a i {
+    font-size: 2em;
+    color: #06489f;
+    opacity: 0.9;
+}
+
+/* Efeito hover para fundo e ícone */
+.socialicons a:hover {
+    background-color: #06489f;
+    transition: 0.5s;
+}
+
+.socialicons a i:hover {
+    color: white;
+    transition: 0.5s;
+}
+
+/* Navegação no rodapé */
+.footerNav {
+    margin: 30px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.footerNav ul li a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+/* Efeito hover nos links do rodapé */
+.footerNav ul li a:hover {
+    opacity: 1;
+}
+
+/* Parte inferior do rodapé */
+.footerBottom {
+    background-color: #06489f;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Texto da parte inferior */
+.footerBottom p {
+    color: white;
+}
+
+/* Nome dos criadores */
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+/* Responsividade: rodapé em telas pequenas */
+@media (max-width: 700px) {
+    .footerNav ul {
+        flex-direction: column;   /* Coloca os links em coluna */
+    }
+
+    .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+}

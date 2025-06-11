@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo do documento HTML5 -->
+<html lang="pt-BR">
+<!-- Elemento raiz do documento, idioma definido para português do Brasil -->
+
+<head>
+    <!-- Metadados da página -->
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres para UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a viewport para responsividade em dispositivos móveis -->
+    <title>Séries</title>
+    <!-- Título da aba do navegador -->
+
+    <!-- Importa ícones do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <!-- Preconexões para melhorar o carregamento das fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Importa a fonte Raleway do Google Fonts com vários pesos e estilos -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Importa arquivo CSS externo para estilização -->
+    <link rel="stylesheet" href="/Categorias/Animes/style.css">
+
+    <!-- Importa ícones da biblioteca Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Ícone da aba do navegador (favicon) -->
+    <link rel="shortcut icon" type="imagex/png" href="/imagens/logo.ico">
+</head>
+
+<body>
+    <!-- Cabeçalho principal da página -->
+    <header class="main-header">
+        <nav class="nav_container">
+            <!-- Logo da navegação -->
+            <div class="nav_logo">
+                <a href="/index.html">
+                    <img src="/imagens/Logo_TheBest.png" alt="logo">
+                </a>
+            </div>
+
+            <!-- Elementos da navegação -->
+            <div class="nav_elementos">
+                <ul class="nav_ul">
+                    <!-- Links principais da navegação -->
+                    <li class="nav_li"><a href="/index.html" class="link">Home</a></li>
+                    <li class="nav_li"><a href="/Sobre/sobre.html" class="link">Sobre</a></li>
+
+                    <!-- Menu dropdown para categorias -->
+                    <li class="nav_li categorias">
+                        <a href="/Categorias/categorias.html" class="link">Categorias</a>
+                        <span class="material-symbols-outlined dropdown_seta">arrow_drop_up</span>
+                        <!-- Conteúdo dropdown -->
+                        <div class="dropdown_container">
+                            <a href="/Categorias/Filmes/Votar_Filmes.html" class="dropdown_link link">Filmes</a>
+                            <a href="/Categorias/Animes/Votar_Animes.html" class="dropdown_link link">Animes</a>
+                            <a href="/Categorias/Series/Votar_Series.html" class="dropdown_link link">Séries</a>
+                            <a href="/Categorias/Jogos/Votar_Jogos.html" class="dropdown_link link">Jogos</a>
+                            <a href="/Categorias/Livros/Votar_Livros.html" class="dropdown_link link">Livros</a>
+                            <a href="/Categorias/Atores/Votar_Atores.html" class="dropdown_link link">Atores</a>
+                        </div>
+                    </li>
+
+                    <!-- Link para página de login/cadastro -->
+                    <li class="nav_li entrar"><a href="/Cadastro/cadastro.php" class="link">Entrar</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Seção do tópico com imagem e título -->
+    <div class="topico">
+        <div class="container_topico">
+            <img src="/imagens/Votar_Series/Votar_Series_Titulo.png" alt="Séries">
+            <span>Séries</span>
+        </div>
+    </div>
+
+    <!-- Formulário para votação -->
+    <form action="salvar_voto.php" method="post">
+        <!-- Cada opção de voto com radio input e conteúdo visual -->
+        <label style="margin-top: 20px;">
+            <input type="radio" name="Anime" value="Shōgun">
+            <div class="box">
+                <img src="/imagens/Votar_Series/Shogun.png" alt="Shōgun">
+                <div class="info">
+                    <div class="title">Shōgun</div>
+                    <div class="descricao">
+                        Um marinheiro inglês naufraga no Japão feudal e se envolve em conflitos políticos, culturais e
+                        pessoais em uma época de grande transformação.
+                    </div>
+                </div>
+            </div>
+        </label>
+
+        <!-- Repetição da estrutura para cada série votável -->
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="The Bear">
+            <div class="box">
+                <img src="/imagens/Votar_Series/The_Bear.png" alt="The Bear">
+                <div class="info">
+                    <div class="title">The Bear</div>
+                    <div class="descricao">
+                        Um jovem chef talentoso retorna a Chicago para salvar o restaurante da família, enfrentando
+                        desafios pessoais e profissionais intensos.
+                    </div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="The Last of Us">
+            <div class="box">
+                <img src="/imagens/Votar_Series/The_Last_Of_Us.jpg" alt="The Last of Us">
+                <div class="info">
+                    <div class="title">The Last of Us</div>
+                    <div class="descricao">
+                        Em um mundo pós-apocalíptico devastado por uma infecção, um homem e uma jovem garota lutam para
+                        sobreviver enquanto formam uma ligação profunda.
+                    </div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Ripley">
+            <div class="box">
+                <img src="/imagens/Votar_Series/Ripley.jpg" alt="Ripley">
+                <div class="info">
+                    <div class="title">Ripley</div>
+                    <div class="descricao">
+                        Série de suspense psicológico baseada nos romances de Patricia Highsmith, explorando a mente
+                        complexa de Tom Ripley, um mestre da manipulação.
+                    </div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Arcane">
+            <div class="box">
+                <img src="/imagens/Votar_Series/Arcane.jpg" alt="Arcane">
+                <div class="info">
+                    <div class="title">Arcane</div>
+                    <div class="descricao">
+                        Animação que explora as origens de personagens do universo de League of Legends, combinando
+                        visuais impressionantes com uma trama emocionante.
+                    </div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Rainha das Lágrimas">
+            <div class="box">
+                <img src="/imagens/Votar_Series/Rainha_das_Lagrimas.jpg" alt="Rainha das Lágrimas">
+                <div class="info">
+                    <div class="title">Rainha das Lágrimas</div>
+                    <div class="descricao">
+                        Drama sul-coreano que mostra os altos e baixos da relação de um casal de magnatas enquanto eles
+                        enfrentam crises pessoais e públicas.
+                    </div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Baby Reindeer">
+            <div class="box">
+                <img src="/imagens/Votar_Series/Baby_Reindeer.jpg" alt="Baby Reindeer">
+                <div class="info">
+                    <div class="title">Baby Reindeer</div>
+                    <div class="descricao">
+                        Baseada em uma história real, a série acompanha uma mulher que lida com obsessões e traumas que
+                        ameaçam sua vida e relacionamento.
+                    </div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="O Problema dos 3 Corpos">
+            <div class="box">
+                <img src="/imagens/Votar_Series/O_Problema_dos_3_Corpos.jpg" alt="O Problema dos 3 Corpos">
+                <div class="info">
+                    <div class="title">O Problema dos 3 Corpos</div>
+                    <div class="descricao">
+                        Adaptação do famoso livro de ficção científica que narra o primeiro contato da humanidade com
+                        uma civilização alienígena avançada e os dilemas decorrentes.
+                    </div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="The Rehearsal">
+            <div class="box">
+                <img src="/imagens/Votar_Series/The_Rehearsal.jpg" alt="The Rehearsal">
+                <div class="info">
+                    <div class="title">The Rehearsal</div>
+                    <div class="descricao">
+                        Um experimento televisivo que mistura realidade e ficção para explorar as complexidades do
+                        comportamento humano e das decisões da vida real.
+                    </div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Round Six: Temporada 2">
+            <div class="box">
+                <img src="/imagens/Votar_Series/Round_Six_Temporada_2.jpg" alt="Round Six: Temporada 2">
+                <div class="info">
+                    <div class="title">Round Six: Temporada 2</div>
+                    <div class="descricao">
+                        Continuação da série sul-coreana de suspense, que mergulha ainda mais fundo nas consequências e
+                        motivações dos participantes dos jogos mortais.
+                    </div>
+                </div>
+            </div>
+        </label>
+
+        <!-- Botão para enviar o voto -->
+        <div class="vote">
+            <input type="submit" value="Votar">
+        </div>
+    </form>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <div class="footerContainer">
+            <!-- Ícones de redes sociais -->
+            <div class="socialicons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+            <!-- Navegação no rodapé -->
+            <div class="footerNav">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/Sobre/sobre.html">Sobre</a></li>
+                    <li><a href="/Categorias/categorias.html">Categorias</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Texto final do rodapé -->
+        <div class="footerBottom">
+            <p>Copyright &copy;2025; Feito por <span class="designer">Mateus, Phietro e Tiago</span></p>
+        </div>
+    </footer>
+
+    <!-- Importa o arquivo JavaScript externo -->
+    <script src="/main.js"></script>
+</body>
+
+</html>

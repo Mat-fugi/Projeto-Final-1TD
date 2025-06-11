@@ -1,0 +1,345 @@
+/* Reset básico para evitar inconsistências entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define a fonte do site */
+body {
+    font-family: 'Raleway';
+}
+
+/* Estilo principal do cabeçalho fixo */
+.main-header {
+    background-color: #06489f; /* Azul escuro de fundo */
+    color: white; /* Cor do texto */
+    width: 100%; /* Largura total */
+    height: 64px; /* Altura do header */
+    display: flex; /* Alinha os filhos em linha */
+    justify-content: center; /* Centraliza horizontalmente */
+    position: fixed; /* Fixa o header no topo */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Mantém acima de outros elementos */
+    transition: transform 0.3s ease-in-out; /* Animação suave para esconder/mostrar */
+}
+
+/* Classe que esconde o header com transição */
+.esconder_Header {
+    transform: translateY(-100%);
+}
+
+/* Container do nav com espaçamento interno */
+.nav_container {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between; /* Espaça os elementos do nav */
+}
+
+/* Container do logo */
+.nav_logo {
+    display: flex;
+    align-items: center;
+    width: 15%;
+}
+
+/* Tamanho da imagem do logo */
+.nav_logo img {
+    width: 75%;
+}
+
+/* Container dos elementos de navegação */
+.nav_elementos {
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+/* Lista não ordenada do menu de navegação */
+.nav_ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+/* Estilização dos itens da lista */
+.nav_li {
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative; /* Necessário para posicionar dropdown */
+}
+
+/* Item com submenu (Categorias) */
+.categorias {
+    display: flex;
+    align-items: center;
+}
+
+/* Item "Entrar" com fonte em negrito */
+.entrar {
+    font-weight: bold;
+}
+
+/* Links padrão sem sublinhado */
+.link {
+    color: white;
+    text-decoration: none;
+}
+
+/* Ícones do Google Fonts */
+.material-symbols-outlined {
+    color: white;
+}
+
+/* Dropdown do item Categorias */
+.dropdown_container {
+    overflow: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1a3f8a;
+    z-index: 1;
+    border: 5px;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Estilo dos links dentro do dropdown */
+.dropdown_link {
+    padding: 10px 15px;
+    display: block;
+}
+
+/* Hover para destaque de itens do dropdown */
+.dropdown_container a:hover {
+    background-color: #2b56bb;
+}
+
+/* Exibe o dropdown ao passar o mouse */
+.nav_ul li:hover .dropdown_container {
+    display: block;
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Ícone de seta do menu dropdown */
+.dropdown_seta {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* Gira a seta ao passar o mouse */
+.nav_ul li:hover .dropdown_seta {
+    transform: rotate(180deg);
+}
+
+/* Conteúdo principal da página */
+.principal {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Seção "Sobre nós" */
+.Sobre_Nos {
+    width: 50%;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.Sobre_Nos h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.Sobre_Nos p {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    color: black;
+    text-align: justify;
+}
+
+/* Seção com fundo levemente acinzentado */
+.fundoSection {
+    background-color: rgba(217, 217, 217, 0.3);
+    width: 100%;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Agrupamento dos tópicos de conteúdo */
+.topicos {
+    width: 50%;
+    height: 175px;
+    display: flex;
+}
+
+/* Cada bloco individual de tópico */
+.topico {
+    width: 50%;
+}
+
+/* Aplica margem à esquerda do primeiro tópico */
+.topico:first-child {
+    margin-right: 5%;
+}
+
+.topico h2 {
+    margin-bottom: 1%;
+}
+
+.topico p {
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+.topico li {
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+/* Seção final de convite à participação */
+.participar {
+    width: 50%;
+    height: 250px;
+    margin: 40px auto 80px;
+}
+
+.participar h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.participar p {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    color: black;
+    text-align: justify;
+}
+
+.participar li {
+    text-align: justify;
+    margin-bottom: 1%;
+    font-size: 1.2rem;
+}
+
+.participar li a {
+    text-decoration: none;
+}
+
+/* Estilização geral do rodapé */
+footer {
+    background-color: #06489f;
+}
+
+/* Container principal do rodapé */
+.footerContainer {
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+/* Ícones das redes sociais */
+.socialicons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialicons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialicons a i {
+    font-size: 2em;
+    color: #06489f;
+    opacity: 0.9;
+}
+
+/* Efeito hover nos ícones sociais */
+.socialicons a:hover {
+    background-color: #06489f;
+    transition: 0.5s;
+}
+
+.socialicons a i:hover {
+    color: white;
+    transition: 0.5s;
+}
+
+/* Navegação no rodapé */
+.footerNav {
+    margin: 30px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.footerNav ul li a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+}
+
+/* Seção inferior do rodapé */
+.footerBottom {
+    background-color: #06489f;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: white;
+}
+
+/* Estilo do nome dos desenvolvedores */
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 700px) {
+    .footerNav ul {
+        flex-direction: column;
+    }
+
+    .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+}

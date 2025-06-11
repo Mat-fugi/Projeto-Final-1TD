@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna a página responsiva -->
+    <title>Atores</title> <!-- Título da aba do navegador -->
+
+    <!--Importa ícones do Google Fonts para usar na página-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <!-- Importa a fonte Raleway do Google Fonts para estilizar o texto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Otimiza carregamento -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Otimiza carregamento -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Importa o CSS externo para estilizar essa página -->
+    <link rel="stylesheet" href="/Categorias/Animes/style.css">
+
+    <!-- Importa a biblioteca de ícones Font Awesome via CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Ícone que aparece na aba do navegador -->
+    <link rel="shortcut icon" type="imagex/png" href="/imagens/logo.ico">
+</head>
+
+<body>
+    <!-- Cabeçalho principal do site -->
+    <header class="main-header">
+        <nav class="nav_container">
+            <!-- Logo do site -->
+            <div class="nav_logo">
+                <a href="/index.html">
+                    <img src="/imagens/Logo_TheBest.png" alt="logo">
+                </a>
+            </div>
+
+            <!-- Navegação principal -->
+            <div class="nav_elementos">
+                <ul class="nav_ul">
+                    <li class="nav_li"><a href="/index.html" class="link">Home</a></li> <!-- Link para Home -->
+                    <li class="nav_li"><a href="/Sobre/sobre.html" class="link">Sobre</a></li> <!-- Link para Sobre -->
+
+                    <!-- Menu dropdown categorias -->
+                    <li class="nav_li categorias">
+                        <a href="/Categorias/categorias.html" class="link">Categorias</a>
+                        <span class="material-symbols-outlined dropdown_seta">arrow_drop_up</span> <!-- Ícone seta -->
+                        <div class="dropdown_container">
+                            <!-- Links para cada categoria -->
+                            <a href="/Categorias/Filmes/Votar_Filmes.html" class="dropdown_link link">Filmes</a>
+                            <a href="/Categorias/Animes/Votar_Animes.html" class="dropdown_link link">Animes</a>
+                            <a href="/Categorias/Series/Votar_Series.html" class="dropdown_link link">Séries</a>
+                            <a href="/Categorias/Jogos/Votar_Jogos.html" class="dropdown_link link">Jogos</a>
+                            <a href="/Categorias/Livros/Votar_Livros.html" class="dropdown_link link">Livros</a>
+                            <a href="Votar_Atores.html" class="dropdown_link link">Atores</a>
+                        </div>
+                    </li>
+
+                    <!-- Link para página de login/registro -->
+                    <li class="nav_li entrar"><a href="/Cadastro/cadastro.php" class="link">Entrar</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Tópico principal da página com imagem e texto -->
+    <div class="topico">
+        <div class="container_topico">
+            <img src="/imagens/Votar_Atores/Mascaras.png" alt="Atores"> <!-- Imagem de máscaras de teatro para tema atores -->
+            <span>Atores</span> <!-- Texto do tópico -->
+        </div>
+    </div>
+
+    <!-- Formulário para votação -->
+    <form action="salvar_voto.php" method="post">
+        <!-- Cada label representa uma opção de voto com rádio e caixa com imagem e descrição -->
+
+        <label style="margin-top: 20px;">
+            <input type="radio" name="Anime" value="Adam Driver"> <!-- Radio para opção Adam Driver -->
+            <div class="box">
+                <img src="/imagens/Votar_Atores/Adam_Driver.jpg" alt="Adam Driver"> <!-- Imagem do ator -->
+                <div class="info">
+                    <div class="title">Adam Driver</div> <!-- Nome do ator -->
+                    <div class="descricao">Reconhecido por sua intensidade e profundidade dramática, Adam Driver brilhou
+                        em História de um Casamento, Star Wars e Ferrari. É elogiado por interpretar personagens
+                        complexos com sensibilidade e força.
+                    </div> <!-- Descrição do filme -->
+                </div>
+            </div>
+        </label>
+
+        <!-- Repetição para os outros Atores -->
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Anya Taylor-Joy">
+            <div class="box">
+                <img src="/imagens/Votar_Atores/Anya_Taylor-Joy.JPG" alt="Anya Taylor-Joy">
+                <div class="info">
+                    <div class="title">Anya Taylor-Joy</div>
+                    <div class="descricao">Com um olhar hipnotizante e atuação marcante, Anya se destacou em O Gambito
+                        da Rainha, A Bruxa, Fragmentado e Furiosa. Sua versatilidade vai do drama ao suspense e ação com
+                        facilidade.</div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Austin Butler">
+            <div class="box">
+                <img src="/imagens/Votar_Atores/Austin_Butler.jpg" alt="Austin Butler (2022)">
+                <div class="info">
+                    <div class="title">Austin Butler (2022)</div>
+                    <div class="descricao">Ganhou destaque mundial com sua interpretação premiada em Elvis. Também atuou
+                        em Era Uma Vez em... Hollywood e Duna: Parte 2. É elogiado por sua entrega emocional e
+                        transformação física.</div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Brad Pitt">
+            <div class="box">
+                <img src="/imagens/Votar_Atores/Brad_Pitt.jpg" alt="Brad Pitt">
+                <div class="info">
+                    <div class="title">Brad Pitt</div>
+                    <div class="descricao">Lenda do cinema moderno, brilhou em Clube da Luta, Bastardos Inglórios e Era
+                        Uma Vez em... Hollywood. Seu carisma, versatilidade e longevidade o tornam um ícone de
+                        Hollywood.</div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Cate Blanchett">
+            <div class="box">
+                <img src="/imagens/Votar_Atores/Cate_Blanchett.jpg" alt="Cate Blanchett">
+                <div class="info">
+                    <div class="title">Cate Blanchett</div>
+                    <div class="descricao">Vencedora de dois Oscars, Cate brilhou em TÁR, Blue Jasmine e Carol. Seu
+                        talento técnico, elegância e domínio de cena a colocam entre as maiores atrizes da história.
+                    </div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Chris Evans">
+            <div class="box">
+                <img src="/imagens/Votar_Atores/Chris_Evans.jpg" alt="Chris Evans">
+                <div class="info">
+                    <div class="title">Chris Evans</div>
+                    <div class="descricao">Com um estilo contido e magnético, Cillian brilhou em Oppenheimer, Peaky
+                        Blinders e A Origem. É conhecido por sua intensidade e expressividade silenciosa.</div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Cillian Murphy">
+            <div class="box">
+                <img src="/imagens/Votar_Atores/Cillian_Murphy.jpg" alt="Cillian Murphy">
+                <div class="info">
+                    <div class="title">Cillian Murphy</div>
+                    <div class="descricao">Com um estilo contido e magnético, Cillian brilhou em Oppenheimer, Peaky
+                        Blinders e A Origem. É conhecido por sua intensidade e expressividade silenciosa.
+                    </div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Denzel Washington">
+            <div class="box">
+                <img src="/imagens/Votar_Atores/Denzel_Washington.JPG" alt="Denzel Washington">
+                <div class="info">
+                    <div class="title">Denzel Washington</div>
+                    <div class="descricao">Ícone absoluto do cinema, Denzel atuou em clássicos como Dia de Treinamento,
+                        Malcolm X e O Protetor. Une carisma, potência dramática e uma presença que domina a tela.
+
+                    </div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Emma Stone">
+            <div class="box">
+                <img src="/imagens/Votar_Atores/Emma_Stone.jpg" alt="Emma Stone">
+                <div class="info">
+                    <div class="title">Emma Stone</div>
+                    <div class="descricao">Vencedora do Oscar por La La Land, também brilhou em Pobres Criaturas e A
+                        Favorita. É admirada por sua espontaneidade, versatilidade e carisma natural.</div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Florence Pugh">
+            <div class="box">
+                <img src="/imagens/Votar_Atores/Florence_Pugh.jpg" alt="Florence Pugh">
+                <div class="info">
+                    <div class="title">Florence Pugh</div>
+                    <div class="descricao">Destaque da nova geração, Florence impressionou em Midsommar, Adoráveis
+                        Mulheres e Não Se Preocupe, Querida. É intensa, expressiva e tem presença magnética.</div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Joaquin Phoenix">
+            <div class="box">
+                <img src="/imagens/Votar_Atores/Joaquin_Phoenix.jpg" alt="Joaquin Phoenix">
+                <div class="info">
+                    <div class="title">Joaquin Phoenix</div>
+                    <div class="descricao">Conhecido por mergulhar profundamente nos personagens, Joaquin arrebatou o
+                        público em Coringa, O Mestre e Ela. Suas atuações são visceralmente autênticas e perturbadoras.
+                    </div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Leonardo Dicaprio">
+            <div class="box">
+                <img src="/imagens/Votar_Atores/Leonardo_Dicaprio.jpg" alt="Leonardo Dicaprio">
+                <div class="info">
+                    <div class="title">Leonardo Dicaprio</div>
+                    <div class="descricao">Com uma carreira cheia de sucessos, Leonardo se destacou em O Lobo de Wall
+                        Street, A Origem, Titanic e Assassinos da Lua das Flores. É um dos atores mais dedicados e
+                        completos de sua geração.</div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Margot Robbie">
+            <div class="box">
+                <img src="/imagens/Votar_Atores/Margot_Robbie.JPG" alt="Margot Robbie">
+                <div class="info">
+                    <div class="title">Margot Robbie</div>
+                    <div class="descricao">Elogiada por Eu, Tonya, O Lobo de Wall Street e Barbie, Margot combina
+                        beleza, talento e entrega emocional em papéis tanto cômicos quanto dramáticos.</div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Meryl Streep">
+            <div class="box">
+                <img src="/imagens/Votar_Atores/Meryl_Streep.jpg" alt="Meryl Streep">
+                <div class="info">
+                    <div class="title">Meryl Streep</div>
+                    <div class="descricao">A atriz mais indicada da história do Oscar, brilhou em A Dama de Ferro, O
+                        Diabo Veste Prada e Kramer vs. Kramer. É sinônimo de excelência e domínio completo da arte de
+                        atuar.</div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Natalie Portman">
+            <div class="box">
+                <img src="/imagens/Votar_Atores/Natalie_Portman.jpg" alt="Natalie Portman">
+                <div class="info">
+                    <div class="title">Natalie Portman</div>
+                    <div class="descricao">Ganhadora do Oscar por Cisne Negro, também se destacou em Closer, V de
+                        Vingança e May December. É elogiada por sua inteligência, intensidade e escolhas ousadas.</div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Paul Mescal">
+            <div class="box">
+                <img src="/imagens/Votar_Atores/Paul_Mescal.jpg" alt="Paul Mescal">
+                <div class="info">
+                    <div class="title">Paul Mescal</div>
+                    <div class="descricao">Revelado por Normal People, Paul encantou a crítica em Aftersun e é destaque
+                        em Gladiador 2. Traz sensibilidade, realismo e uma abordagem emocional muito refinada.</div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Pedro Pascal">
+            <div class="box">
+                <img src="/imagens/Votar_Atores/Pedro_Pascal.jpg" alt="Pedro Pascal">
+                <div class="info">
+                    <div class="title">Pedro Pascal</div>
+                    <div class="descricao">Amado pelo público, Pedro brilha em The Last of Us, The Mandalorian e Game of
+                        Thrones. Seu carisma, versatilidade e humor natural fazem dele um ator querido e versátil.</div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Robert Downey Jr.">
+            <div class="box">
+                <img src="/imagens/Votar_Atores/Robert_Downey_Jr.JPG" alt="Robert Downey Jr.">
+                <div class="info">
+                    <div class="title">Robert Downey Jr.</div>
+                    <div class="descricao">Conhecido como o eterno Homem de Ferro, também foi aclamado em Oppenheimer,
+                        Sherlock Holmes e Chaplin. É admirado por seu carisma, timing cômico e por ter reconstruído sua
+                        carreira com talento e autenticidade.</div>
+                </div>
+            </div>
+        </label>
+
+        <label style="margin-top: 10px;">
+            <input type="radio" name="Anime" value="Zendaya">
+            <div class="box">
+                <img src="/imagens/Votar_Atores/Zendaya.JPG" alt="Zendaya">
+                <div class="info">
+                    <div class="title">Zendaya</div>
+                    <div class="descricao">Protagonista forte da nova geração, brilhou em Euphoria, Duna e Malcolm &
+                        Marie. Conquista com sua presença marcante, maturidade artística e elegância em cena.</div>
+                </div>
+            </div>
+        </label>
+
+        <!-- Botão para enviar o voto -->
+        <div class="vote">
+            <input type="submit" value="Votar">
+        </div>
+    </form>
+
+    <!-- Rodapé do site -->
+    <footer>
+        <div class="footerContainer">
+            <!-- Ícones de redes sociais -->
+            <div class="socialicons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+            <!-- Navegação do rodapé -->
+            <div class="footerNav">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/Sobre/sobre.html">Sobre</a></li>
+                    <li><a href="/Categorias/categorias.html">Categorias</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Informação de copyright -->
+        <div class="footerBottom">
+            <p>Copyright &copy;2025; Feito por <span class="designer">Mateus, Phietro e Tiago</span></p>
+        </div>
+    </footer>
+
+    <!-- Importa o JavaScript externo que controla comportamentos da página -->
+    <script src="/main.js"></script>
+</body>
+
+</html>

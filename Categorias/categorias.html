@@ -1,0 +1,195 @@
+<!DOCTYPE html> <!-- Declaração do tipo do documento como HTML5 -->
+<html lang="pt-BR"> <!-- Define o idioma principal da página como português do Brasil -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres para UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a viewport para garantir responsividade em dispositivos móveis -->
+    <title>Categorias</title> <!-- Define o título que aparece na aba do navegador -->
+
+    <!-- Importa ícones do Google Fonts, usados para elementos gráficos e ícones -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <!-- Preconexões para otimizar o carregamento das fontes do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Importa a fonte Raleway do Google Fonts, que será usada no texto da página -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Importa o arquivo CSS local que estiliza a página -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Importa a biblioteca de ícones Font Awesome para usar ícones de redes sociais -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Define o ícone que aparece na aba do navegador -->
+    <link rel="shortcut icon" type="imagex/png" href="/imagens/logo.ico">
+</head>
+
+<body>
+    <!-- Cabeçalho principal que contém a barra de navegação -->
+    <header class="main-header">
+        <nav class="nav_container">
+            <!-- Logo do site, clicável para voltar à página inicial -->
+            <div class="nav_logo">
+                <a href="/index.html">
+                    <img src="/imagens/Logo_TheBest.png" alt="logo">
+                </a>
+            </div>
+
+            <!-- Container dos links de navegação -->
+            <div class="nav_elementos">
+                <ul class="nav_ul">
+                    <!-- Link para a página inicial -->
+                    <li class="nav_li"><a href="/index.html" class="link">Home</a></li>
+
+                    <!-- Link para a página "Sobre" -->
+                    <li class="nav_li"><a href="/Sobre/sobre.html" class="link">Sobre</a></li>
+
+                    <!-- Item de navegação com menu dropdown para categorias -->
+                    <li class="nav_li categorias">
+                        <a href="/Categorias/categorias.html" class="link">Categorias</a>
+                        <!-- Ícone da seta indicando dropdown (usando ícones do Google Fonts) -->
+                        <span class="material-symbols-outlined dropdown_seta">arrow_drop_up</span>
+                        <!-- Menu dropdown com links para subcategorias -->
+                        <div class="dropdown_container">
+                            <a href="Filmes/Votar_Filmes.html" class="dropdown_link link">Filmes</a>
+                            <a href="Animes/Votar_Animes.html" class="dropdown_link link">Animes</a>
+                            <a href="Series/Votar_Series.html" class="dropdown_link link">Séries</a>
+                            <a href="Jogos/Votar_Jogos.html" class="dropdown_link link">Jogos</a>
+                            <a href="Livros/Votar_Livros.html" class="dropdown_link link">Livros</a>
+                            <a href="Atores/Votar_Atores.html" class="dropdown_link link">Atores</a>
+                        </div>
+                    </li>
+
+                    <!-- Link para página de cadastro ou login -->
+                    <li class="nav_li entrar"><a href="/Cadastro/cadastro.php" class="link">Entrar</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="alinhamento">
+        <div class="lista_container">
+
+            <!-- Card da categoria Filmes -->
+            <div class="item">
+                <a href="Filmes/Votar_Filmes.html"> <!-- Link para votação em Filmes -->
+                    <img src="/imagens/Filmes2.png" alt="Filmes"> <!-- Imagem representativa da categoria -->
+                    <div class="texto">
+                        <p>
+                            Explore as obras que marcaram o cinema! Vote nos filmes que emocionaram, surpreenderam e se
+                            tornaram inesquecíveis para o público neste ano.
+                        </p> <!-- Descrição da categoria Filmes -->
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card da categoria Séries -->
+            <div class="item">
+                <a href="Series/Votar_Series.html"> <!-- Link para votação em Séries -->
+                    <img src="/imagens/Séries2.png" alt="Séries"> <!-- Imagem da categoria Séries -->
+                    <div class="texto">
+                        <p>
+                            De maratonas envolventes a episódios que viralizaram, escolha as séries que mais
+                            conquistaram seu coração e dominaram as telas.
+                        </p> <!-- Descrição da categoria Séries -->
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card da categoria Animes -->
+            <div class="item">
+                <a href="Animes/Votar_Animes.html"> <!-- Link para votação em Animes -->
+                    <img src="/imagens/Animes2.png" alt="Animes"> <!-- Imagem da categoria Animes -->
+                    <div class="texto">
+                        <p>
+                            Entre batalhas épicas, dramas intensos e mundos fantásticos, selecione os animes que
+                            mais se
+                            destacaram e movimentaram a comunidade otaku.
+                        </p> <!-- Descrição da categoria Animes -->
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card da categoria Jogos -->
+            <div class="item">
+                <a href="Jogos/Votar_Jogos.html"> <!-- Link para votação em Jogos -->
+                    <img src="/imagens/Jogos2.png" alt="Jogos"> <!-- Imagem da categoria Jogos -->
+                    <div class="texto">
+                        <p>
+                            Escolha o game que mais se destacou com jogabilidade, gráficos e diversão. Qual título
+                            foi
+                            inesquecível pra você?
+                        </p> <!-- Nota: texto repetido do card de Animes, provavelmente erro -->
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card da categoria Livros -->
+            <div class="item">
+                <a href="Livros/Votar_Livros.html"> <!-- Link para votação em Livros -->
+                    <img src="/imagens/Livros2.png" alt="Livros"> <!-- Imagem da categoria Livros -->
+                    <div class="texto">
+                        <p>
+                            Das páginas mais lidas aos lançamentos mais impactantes, escolha os livros que tocaram,
+                            inspiraram ou prenderam sua atenção do começo ao fim.
+                        </p> <!-- Descrição da categoria Livros -->
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card da categoria Atores -->
+            <div class="item">
+                <a href="Atores/Votar_Atores.html"> <!-- Link para votação em Séries -->
+                    <img src="/imagens/Atores.png" alt="Atores"> <!-- Imagem da categoria Séries -->
+                    <div class="texto">
+                        <p>
+                            Vote nos talentos que deram vida aos personagens mais marcantes do ano, com atuações que
+                            emocionaram, surpreenderam e conquistaram o público.
+                        </p> <!-- Descrição da categoria Atores -->
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <div class="footerContainer">
+            <!-- Ícones de redes sociais, cada link com seu respectivo ícone do Font Awesome -->
+            <div class="socialicons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a> <!-- Facebook -->
+                <a href=""><i class="fa-brands fa-youtube"></i></a> <!-- YouTube -->
+                <a href=""><i class="fa-brands fa-twitter"></i></a> <!-- Twitter -->
+                <a href=""><i class="fa-brands fa-tiktok"></i></a> <!-- TikTok -->
+                <a href=""><i class="fa-brands fa-instagram"></i></a> <!-- Instagram -->
+            </div>
+
+            <!-- Navegação no rodapé com links importantes -->
+            <div class="footerNav">
+                <ul>
+                    <li><a href="/index.html">Home</a></li> <!-- Link para Home -->
+                    <li><a href="/Sobre/sobre.html">Sobre</a></li> <!-- Link para Sobre -->
+                    <li><a href="/Categorias/categorias.html">Categorias</a></li> <!-- Link para Categorias -->
+                    <li><a href="">Contato</a></li> <!-- Link para Contato (ainda sem URL definida) -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Barra inferior do rodapé com direitos autorais -->
+        <div class="footerBottom">
+            <p>Copyright &copy;2025; Feito por
+                <span class="designer">Mateus, Phietro e Tiago</span> <!-- Créditos dos autores -->
+            </p>
+        </div>
+    </footer>
+
+    <!-- Importa arquivo JavaScript local para funcionalidade extra da página -->
+    <script src="/main.js"></script>
+</body>
+
+</html>
